@@ -20,13 +20,15 @@ services:
     region: frankfurt      # il più vicino all'Italia
     branch: main
 
+    # Comando su una riga sola.
+    #
+    # Con lo scalare ripiegato ">-" una riga più indentata della precedente
+    # conserva l'a capo invece di unirsi: le opzioni finirebbero su righe
+    # separate e bash le interpreterebbe come comandi.
+    #
     # Si installano solo i due progetti che servono in rete: il guscio Electron
     # scaricherebbe un centinaio di megabyte a ogni build per nulla.
-    buildCommand: >-
-      corepack enable &&
-      pnpm install --frozen-lockfile
-        --filter @kandinsky/server... --filter @kandinsky/kiosk... &&
-      pnpm build
+    buildCommand: "corepack enable && pnpm install --frozen-lockfile --filter @kandinsky/server... --filter @kandinsky/kiosk... && pnpm build"
     startCommand: pnpm start
 
     # Render lo interroga senza credenziali: per questo l'autenticazione
