@@ -141,14 +141,24 @@ export function emailScreen(
   return mount(root, el);
 }
 
-export function thanksScreen(root: HTMLElement, queued: boolean, onRestart: () => void): Cleanup {
+export function thanksScreen(
+  root: HTMLElement,
+  esito: "sent" | "queued" | "local",
+  onRestart: () => void,
+): Cleanup {
+  // Il messaggio deve dire la verità: promettere una mail che non partirà
+  // è il modo più rapido per far sentire preso in giro un genitore.
+  const messaggi = {
+    sent: "L'opera è in viaggio verso la casella e-mail.",
+    queued: "La tua opera partirà tra poco: la stiamo mettendo in coda.",
+    local: "Questa è una versione di prova: l'opera resta su questo schermo.",
+  };
+
   const el = document.createElement("section");
   el.className = "screen";
   el.innerHTML = `
     <h1>Hai fatto una cosa nuova</h1>
-    <p>${queued
-      ? "La tua opera partirà tra poco: la stiamo mettendo in coda."
-      : "L'opera è in viaggio verso la casella e-mail."}</p>
+    <p>${messaggi[esito]}</p>
     <button class="btn btn--primary btn--xl" id="restart">Ricomincia</button>
   `;
   el.querySelector<HTMLButtonElement>("#restart")!.onclick = onRestart;

@@ -42,8 +42,22 @@ export async function loadContent(base = "/content"): Promise<Content> {
 
   const parsedElements = ElementLibrary.parse(elements);
 
+  /**
+   * VITE_STANDALONE=1 disattiva server ed e-mail in fase di compilazione.
+   *
+   * Serve alle anteprime su hosting statico. Sta qui e non nel JSON perché
+   * i contenuti sono gli stessi che andranno in sala: una configurazione
+   * diversa non deve richiedere un file diverso da tenere allineato.
+   */
+  const autonomo = import.meta.env.VITE_STANDALONE === "1";
+  const parsedConfig = KioskConfig.parse(config);
+  if (autonomo) {
+    parsedConfig.server.enabled = false;
+    parsedConfig.email.enabled = false;
+    console.log("[content] modalità autonoma: nessun server, nessun invio.");
+  }
+
   return {
-    config: KioskConfig.parse(config),
     sets: parsedElements.sets,
     elements: parsedElements.elements
       .filter((e) => e.enabled),

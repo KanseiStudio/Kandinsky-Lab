@@ -20,7 +20,13 @@ services:
     region: frankfurt      # il più vicino all'Italia
     branch: main
 
-    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build
+    # Si installano solo i due progetti che servono in rete: il guscio Electron
+    # scaricherebbe un centinaio di megabyte a ogni build per nulla.
+    buildCommand: >-
+      corepack enable &&
+      pnpm install --frozen-lockfile
+        --filter @kandinsky/server... --filter @kandinsky/kiosk... &&
+      pnpm build
     startCommand: pnpm start
 
     # Render lo interroga senza credenziali: per questo l'autenticazione

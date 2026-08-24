@@ -142,6 +142,12 @@ cui esiste `app/uuid.ts`. Vale per qualunque cosa si aggiunga in futuro.
 
 ## Trappole di tipo
 
+**Il server si compila con esbuild, non con `tsc`.** `tsc` non riscrive gli alias
+di `paths`, quindi l'import di `@kandinsky/schema` resterebbe nel JavaScript
+emesso e fallirebbe a runtime; e includendo un file fuori da `src` sposta la
+radice comune, scrivendo in `dist/apps/server/src/` invece che in `dist/`.
+`tsc --noEmit` resta per il controllo dei tipi, che esbuild non fa.
+
 **CSS da npm si importa da JavaScript, non con `@import`.** Un `@import` con nome
 di pacchetto dentro un foglio di stile finisce a postcss-import, che lo tratta
 come percorso relativo alla cartella del foglio e fallisce in build. I font

@@ -39,6 +39,12 @@ export const KioskConfig = z.object({
     consentVersion: z.string().default("1.0"),
   }),
   server: z.object({
+    /**
+     * false = modalità autonoma: nessuna chiamata di rete, l'opera resta
+     * sul dispositivo. Serve per le anteprime su hosting statico, dove un
+     * server che accetti le opere semplicemente non esiste.
+     */
+    enabled: z.boolean().default(true),
     /** Stringa vuota = stessa origine da cui è servita l'esperienza. */
     baseUrl: z.string().default(""),
     /** se il server non risponde l'opera resta in coda locale */

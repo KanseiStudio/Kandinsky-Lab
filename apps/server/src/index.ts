@@ -12,7 +12,10 @@ import { createMailer } from "./mailer";
 import { startQueueWorker } from "./queue";
 import { startRetentionJob } from "./retention";
 
+// Render (e ogni servizio simile) assegna la porta tramite variabile:
+// va letta, mai fissata, o il controllo di salute non risponde mai.
 const PORT = Number(process.env.PORT ?? 8787);
+const HOST = process.env.HOST ?? "0.0.0.0";
 const DATA_DIR = process.env.DATA_DIR ?? "./data";
 const IMAGE_DIR = join(DATA_DIR, "artworks");
 
@@ -160,6 +163,8 @@ app.get("/api/queue", (_req, res) => {
 
 /** Stato di sala per il monitoraggio: quante opere, quante in coda, quante fallite. */
 app.get("/api/health", (_req, res) => {
+  // Deve restare leggero e non fallire mai: Render lo interroga di continuo
+  // e a ogni errore riavvia il servizio.
   const counts = db
     .prepare(`SELECT status, COUNT(*) as n FROM artworks GROUP BY status`)
     .all() as unknown as { status: string; n: number }[];
@@ -218,8 +223,8 @@ app.use((err: any, _req: any, res: any, _next: any) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`[server] Kandinsky Lab in ascolto su :${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`[server] Kandinsky Lab in ascolto su ${HOST}:${PORT}`);
 
   if (!smtpConfigured) {
     // In sviluppo è la condizione normale. Le opere vengono comunque

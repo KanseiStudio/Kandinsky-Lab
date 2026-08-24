@@ -45,46 +45,102 @@ pnpm start      # avvia sulla porta 8787
 Provare in locale su `http://localhost:8787` **prima** di pubblicare: se
 funziona lì, l'unica variabile che resta è l'hosting.
 
-## 3. Dove pubblicare
+## 3. Pubblicare su Render
 
-Serve un servizio che esegua Node 24 con **disco persistente**: il database
-SQLite e i PNG delle opere stanno su file, e su un filesystem effimero
-spariscono a ogni riavvio.
+Nel repository c'è `render.yaml`: Render lo legge e configura tutto da solo.
 
-| Servizio | Note |
-|---|---|
-| **Render** | Web Service + Disk da 1 GB montato su `/data`. HTTPS automatico. |
-| **Railway** | Volume persistente, deploy da repository Git. |
-| **Fly.io** | Volume, più controllo, un po' più di configurazione. |
-| **VPS proprio** | Massimo controllo. Serve un reverse proxy per il certificato: con Caddy sono tre righe. |
+### Preparazione
 
-Variabili d'ambiente da impostare sul servizio:
+Il progetto deve stare su un repository Git (GitHub, GitLab o Bitbucket).
+**Il lockfile `pnpm-lock.yaml` va incluso**: il comando di build usa
+`--frozen-lockfile`, che senza fallisce.
 
-```
-NODE_VERSION=24
-PORT=8787                      (molti servizi la impongono: leggerla, non fissarla)
-DATA_DIR=/data                 percorso del disco persistente
-APP_USER=kandinsky
-APP_PASSWORD=...
-SMTP_HOST / SMTP_PORT / SMTP_SECURE / SMTP_USER / SMTP_PASS
-MAIL_FROM / MUSEUM_NAME / MUSEUM_URL
+```bash
+git init
+git add .
+git commit -m "Kandinsky Lab"
+git remote add origin <indirizzo-del-repository>
+git push -u origin main
 ```
 
-Comandi: build `pnpm install && pnpm build`, avvio `pnpm start`.
+Controllare che `apps/server/.env` **non** finisca nel commit: è già in
+`.gitignore`, ma vale la pena verificarlo, perché contiene la password SMTP.
 
-## 4. L'e-mail su hosting condiviso
+### Creazione del servizio
 
-**Molti servizi bloccano le porte SMTP in uscita** (25, 465, 587) per impedire
-l'invio di spam. Se le opere restano in coda con errori di connessione, è quello.
+1. Su Render: **New → Blueprint**, e selezionare il repository.
+   Render trova `render.yaml` e propone il servizio già configurato.
+2. Chiede le due variabili marcate `sync: false`, che non stanno nel
+   repository per ovvie ragioni:
+   - `APP_PASSWORD` — la password d'accesso all'anteprima
+   - `SMTP_PASS` — la password della casella di posta
+3. **Apply**. La prima build richiede qualche minuto: scarica le dipendenze,
+   compila l'esperienza e il server.
+
+L'indirizzo sarà `https://kandinsky-lab.onrender.com` o simile. Il browser
+chiederà utente e password al primo accesso.
+
+### Il disco non è opzionale
+
+`render.yaml` prevede un disco da 1 GB montato su `/var/data`, con
+`DATA_DIR` che punta lì. Senza, il database SQLite e i PNG delle opere
+sparirebbero a ogni riavvio e a ogni nuovo rilascio.
+
+Per questo il piano indicato è **Starter** e non quello gratuito: i dischi
+persistenti sul piano gratuito non esistono. Se per i primi test l'invio
+delle opere non serve, si può passare a `plan: free` togliendo la sezione
+`disk` e lasciando `DATA_DIR` al valore predefinito — l'esperienza funziona
+per intero, semplicemente le opere non sopravvivono ai riavvii.
+
+### Attesa al primo accesso
+
+Sul piano gratuito il servizio va in letargo dopo un quarto d'ora di
+inattività, e la prima richiesta successiva impiega una trentina di secondi.
+Va detto a chi prova, o penserà che sia rotto. Sul piano Starter non succede.
+
+### Se la build riesce ma l'avvio fallisce
+
+`Cannot find module .../dist/index.js` significa che il server non è stato
+compilato dove ci si aspetta. Il server usa **esbuild**, non l'emissione di
+`tsc`: quest'ultima non riscrive gli alias di `paths` e sposta la radice di
+output quando il programma include file fuori da `src`, come il pacchetto
+`@kandinsky/schema`. Se qualcuno rimette `tsc` come compilatore, l'avvio
+torna a fallire esattamente così.
+
+### Aggiornare
+
+```bash
+git push
+```
+
+Render ricompila e ripubblica da solo. I contenuti in `packages/content`
+sono file statici: per correggere una didascalia o sostituire una forma
+basta modificare il JSON o il PNG e fare push, senza toccare il codice.
+
+## 4. L'e-mail
+
+**Render blocca le porte SMTP in uscita sui piani bassi**, come quasi tutti i
+servizi cloud, per impedire l'invio di spam. Se le opere restano in coda con
+errori di connessione o timeout, la causa è quella e non la configurazione.
+
+Come accorgersene: `GET /api/queue` mostra `last_error` per ogni opera non
+partita. Un `ETIMEDOUT` o un `ECONNREFUSED` verso `mail.kansei-studio.com`
+significa porta bloccata.
 
 Tre strade:
 
-1. Lasciare l'invio disattivato durante i test: le opere si salvano comunque e
-   si vedono con `GET /api/queue`. Per la prova dell'esperienza è sufficiente.
-2. Usare un provider transazionale con API HTTP invece che SMTP.
-3. Chiedere al servizio di sbloccare la porta, cosa che alcuni fanno su richiesta.
+1. **Lasciare l'invio disattivato durante i test.** Basta non impostare
+   `SMTP_PASS`: le opere si salvano comunque, si vedono con `/api/queue` e
+   l'esperienza funziona per intero. Per provare *l'esperienza* è sufficiente,
+   ed è quello che consiglio per i primi giri.
+2. **Usare un provider transazionale con API HTTP** invece di SMTP: le API
+   passano sulla 443, che non è mai bloccata. Richiede di sostituire
+   Nodemailer nel `mailer.ts`, una mezz'ora di lavoro.
+3. **Chiedere lo sblocco a Render**, che su richiesta motivata a volte lo
+   concede sui piani a pagamento.
 
-In sala il problema non si pone: il server gira sulla rete del museo.
+In sala il problema non si pone: il server gira sulla rete del museo e la
+casella è quella dell'istituzione.
 
 ## 5. Cosa dire a chi prova
 

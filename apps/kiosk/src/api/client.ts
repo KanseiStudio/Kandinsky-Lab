@@ -21,7 +21,15 @@ function apiBase() {
   return configurato || window.location.origin;
 }
 
-export async function submitArtwork(payload: ArtworkSubmission): Promise<"sent" | "queued"> {
+export async function submitArtwork(payload: ArtworkSubmission): Promise<"sent" | "queued" | "local"> {
+  if (!store.config.server.enabled) {
+    // Anteprima statica: nessun server a cui consegnare. L'opera non viene
+    // nemmeno accodata, perché non partirebbe mai e riempirebbe lo storage
+    // del browser di PNG destinati a restare lì.
+    console.log("[outbox] modalità autonoma: l'opera resta sul dispositivo.");
+    return "local";
+  }
+
   const sizeMb = (payload.imageBase64.length * 0.75) / 1024 / 1024;
   console.log(
     `[outbox] opera ${payload.sessionId} — immagine ${sizeMb.toFixed(1)} MB, ` +
@@ -74,6 +82,7 @@ export async function flush(): Promise<boolean> {
 
 /** Ritenta ogni 30s finché la coda non è vuota. */
 export function startOutboxWorker() {
+  if (!store.config.server.enabled) return;
   window.setInterval(() => void flush(), 30_000);
   window.addEventListener("online", () => void flush());
 }

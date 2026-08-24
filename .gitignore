@@ -6,3 +6,5 @@ release/
 apps/server/data/
 *.log
 .DS_Store
+
+# Il lockfile NON va ignorato: serve a Render per build riproducibili.

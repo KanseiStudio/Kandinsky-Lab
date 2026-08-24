@@ -324,7 +324,8 @@ async function boot() {
     show(() =>
       screens.titleScreen(uiRoot, (title) => {
         store.state.title = title || "Senza titolo";
-        content.config.email.enabled ? goToEmail() : void deliver(undefined);
+        const puoSpedire = content.config.email.enabled && content.config.server.enabled;
+        puoSpedire ? goToEmail() : void deliver(undefined);
       }),
     );
   }
@@ -390,7 +391,7 @@ async function boot() {
     });
 
     store.setScreen("thanks");
-    show(() => screens.thanksScreen(uiRoot, result === "queued", () => restart()));
+    show(() => screens.thanksScreen(uiRoot, result, () => restart()));
   }
 
   function restart() {
