@@ -35,9 +35,30 @@ services:
     # di base lascia passare /api/health.
     healthCheckPath: /api/health
 
+    # Non ricompilare quando cambiano solo documentazione o strumenti:
+    # ogni rilascio inutile è tempo perso e un servizio che si riavvia.
+    buildFilter:
+      ignoredPaths:
+        - "docs/**"
+        - "tools/**"
+        - "**/*.md"
+        - ".gitignore"
+
     envVars:
       - key: NODE_VERSION
         value: "24"
+
+      # --- Velocità di compilazione --------------------------------------
+      # Electron serve solo all'applicazione desktop: il suo binario pesa
+      # circa 250 MB ed è il contributo maggiore alla cache. Sul server
+      # non viene nemmeno scaricato.
+      - key: ELECTRON_SKIP_BINARY_DOWNLOAD
+        value: "1"
+
+      # Disattiva le sourcemap in produzione: pesano più del bundle stesso
+      # e verrebbero trasferite a ogni rilascio senza servire a nulla.
+      - key: CI
+        value: "true"
 
       # Senza disco persistente si scrive nel filesystem temporaneo:
       # funziona, ma si azzera a ogni riavvio.

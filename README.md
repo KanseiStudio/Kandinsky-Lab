@@ -48,6 +48,17 @@ pnpm --filter @kandinsky/server mail:test tuo.indirizzo@esempio.it
 
 Se le opere non arrivano, `GET /api/queue` mostra l'ultimo errore per ognuna.
 
+## Applicazione desktop
+
+```bash
+pnpm app:dev     # apre l'esperienza a schermo intero, senza impacchettare
+pnpm app:mac     # .dmg (richiede un Mac)
+pnpm app:win     # installatore Windows
+```
+
+Uscita dal chiosco: **Ctrl/Cmd + Alt + Shift + Q**. Dettagli in
+`docs/app-desktop.md`.
+
 ## Pubblicare l'anteprima
 
 Un solo processo Node serve esperienza, contenuti e API, protetti da una

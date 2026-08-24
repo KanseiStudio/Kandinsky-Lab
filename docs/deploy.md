@@ -107,6 +107,35 @@ output quando il programma include file fuori da `src`, come il pacchetto
 `@kandinsky/schema`. Se qualcuno rimette `tsc` come compilatore, l'avvio
 torna a fallire esattamente così.
 
+### Quanto dura un rilascio, e come accorciarlo
+
+Il tempo non se ne va nella compilazione — Vite impiega un paio di secondi.
+Se ne va in installazione, cache e trasferimento. Le misure applicate:
+
+| Intervento | Effetto |
+|---|---|
+| `ELECTRON_SKIP_BINARY_DOWNLOAD=1` | evita 250 MB di binario Electron, inutile sul server |
+| `neverBuiltDependencies` in package.json | salta gli script di installazione di Electron |
+| `--filter @kandinsky/server... @kandinsky/kiosk...` | non installa affatto il progetto del guscio |
+| `CI=true` → niente sourcemap | 2,5 MB in meno da trasferire a ogni rilascio |
+| `buildFilter.ignoredPaths` | nessuna ricompilazione per modifiche a documentazione o strumenti |
+
+Dopo il primo rilascio con queste impostazioni la cache va ricostruita una
+volta: **il beneficio si vede dal secondo in poi**.
+
+Quello che resta non si può ottimizzare da qui: sul piano gratuito le build
+girano su macchine condivise e passano da una coda. Se i rilasci frequenti
+diventano un problema quotidiano, il piano Starter è la differenza vera —
+tutto il resto sono minuti recuperati ai margini.
+
+### Il modo più rapido di provare non è Render
+
+Per il collaudo dell'esperienza, `pnpm app:dev` apre l'applicazione desktop
+in pochi secondi, senza rete e senza attese. Il servizio online serve a far
+provare l'esperienza **a distanza**: se stai iterando sul codice, iterare
+attraverso un rilascio è la strada più lenta possibile. Vedi
+`docs/app-desktop.md`.
+
 ### Aggiornare
 
 ```bash

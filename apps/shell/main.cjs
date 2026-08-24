@@ -1,22 +1,46 @@
 const { app, BrowserWindow, globalShortcut, powerSaveBlocker, screen } = require("electron");
 const path = require("node:path");
+const { avviaServer } = require("./server.cjs");
 
 /**
- * Guscio da chiosco per il tavolo touch.
+ * Guscio da chiosco.
  *
  * Le cose che rompono davvero un'installazione museale, in ordine di frequenza:
- * 1. lo screensaver che parte a metà mattina  -> powerSaveBlocker
+ * 1. lo screensaver che parte a metà mattina   -> powerSaveBlocker
  * 2. un visitatore che apre il menu contestuale -> disabilitato
- * 3. Alt+F4 / Ctrl+W di un adulto curioso     -> intercettati
- * 4. il renderer che crasha alle 15:00        -> auto-reload
+ * 3. Alt+F4 / Cmd+Q di un adulto curioso        -> intercettati
+ * 4. il renderer che crasha alle 15:00          -> ricaricamento automatico
+ *
+ * L'esperienza viene servita da un server interno su 127.0.0.1 anziché
+ * caricata con file://, perché i moduli ES e le richieste verso /content
+ * con quel protocollo falliscono per via delle regole di origine.
  */
 let win = null;
 let blockerId = null;
+let server = null;
 
-const KIOSK_URL = process.env.KIOSK_URL || `file://${path.join(__dirname, "dist/index.html")}`;
-const EXIT_COMBO = "CommandOrControl+Alt+Shift+Q"; // uscita per il tecnico
+const USCITA = "CommandOrControl+Alt+Shift+Q"; // combinazione per il tecnico
 
-function createWindow() {
+function cartelle() {
+  // Nell'applicazione impacchettata i file stanno fra le risorse;
+  // in sviluppo si leggono direttamente dal progetto.
+  if (app.isPackaged) {
+    return {
+      kioskDir: path.join(process.resourcesPath, "kiosk"),
+      contentDir: path.join(process.resourcesPath, "content"),
+    };
+  }
+  return {
+    kioskDir: path.join(__dirname, "../kiosk/dist"),
+    contentDir: path.join(__dirname, "../../packages/content"),
+  };
+}
+
+async function creaFinestra() {
+  const { kioskDir, contentDir } = cartelle();
+  const avviato = await avviaServer({ kioskDir, contentDir });
+  server = avviato.server;
+
   const display = screen.getPrimaryDisplay();
 
   win = new BrowserWindow({
@@ -29,22 +53,21 @@ function createWindow() {
     frame: false,
     backgroundColor: "#141414",
     autoHideMenuBar: true,
+    // Su macOS nasconde i semafori mantenendo la finestra ridimensionabile
+    // durante lo sviluppo.
+    titleBarStyle: "hiddenInset",
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,
       backgroundThrottling: false,
-      // Il pannello riporta tocchi grezzi: senza questo Chrome
-      // applica il proprio riconoscimento gesti e mangia il pinch.
-      enableBlinkFeatures: "TouchEventFeatureDetection",
     },
   });
 
-  win.loadURL(KIOSK_URL);
+  win.loadURL(process.env.KIOSK_URL || avviato.url);
   win.webContents.on("context-menu", (e) => e.preventDefault());
 
-  // Renderer morto: si riparte da soli, senza chiamare nessuno.
-  win.webContents.on("render-process-gone", (_e, details) => {
-    console.error("[shell] renderer terminato:", details.reason);
+  win.webContents.on("render-process-gone", (_e, dettagli) => {
+    console.error("[shell] renderer terminato:", dettagli.reason);
     win.reload();
   });
 
@@ -54,21 +77,27 @@ function createWindow() {
 app.commandLine.appendSwitch("touch-events", "enabled");
 app.commandLine.appendSwitch("disable-pinch");
 app.commandLine.appendSwitch("overscroll-history-navigation", "0");
-app.disableHardwareAcceleration = false;
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
   blockerId = powerSaveBlocker.start("prevent-display-sleep");
-  createWindow();
+  await creaFinestra();
 
-  globalShortcut.register(EXIT_COMBO, () => app.quit());
-  ["CommandOrControl+W", "CommandOrControl+R", "F11", "Alt+F4"].forEach((k) =>
+  globalShortcut.register(USCITA, () => app.quit());
+  ["CommandOrControl+W", "CommandOrControl+R", "F11"].forEach((k) =>
     globalShortcut.register(k, () => {}),
   );
+
+  // Convenzione macOS: cliccando l'icona nel Dock la finestra torna.
+  app.on("activate", () => {
+    if (BrowserWindow.getAllWindows().length === 0) void creaFinestra();
+  });
 });
 
 app.on("will-quit", () => {
   globalShortcut.unregisterAll();
   if (blockerId !== null) powerSaveBlocker.stop(blockerId);
+  server?.close();
 });
 
+// Su macOS le applicazioni restano attive senza finestre: qui no, è un chiosco.
 app.on("window-all-closed", () => app.quit());

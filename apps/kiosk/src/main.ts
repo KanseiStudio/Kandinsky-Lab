@@ -351,7 +351,8 @@ async function boot() {
       // "la mail non arriva".
       console.error("[deliver] consegna fallita:", err);
       store.setScreen("thanks");
-      show(() => screens.thanksScreen(uiRoot, true, () => restart()));
+      // La consegna è fallita: l'opera resta nell'outbox e riparte da sola.
+      show(() => screens.thanksScreen(uiRoot, "queued", () => restart()));
     }
   }
 

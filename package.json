@@ -9,8 +9,10 @@
     "dev:server": "pnpm --filter @kandinsky/server dev",
     "build": "pnpm --filter @kandinsky/kiosk build && pnpm --filter @kandinsky/server build",
     "typecheck": "pnpm -r typecheck",
-    "package:kiosk": "pnpm --filter @kandinsky/shell package",
-    "start": "pnpm --filter @kandinsky/server start"
+    "start": "pnpm --filter @kandinsky/server start",
+    "app:mac": "pnpm --filter @kandinsky/kiosk build && pnpm --filter @kandinsky/shell pack:mac",
+    "app:win": "pnpm --filter @kandinsky/kiosk build && pnpm --filter @kandinsky/shell pack:win",
+    "app:dev": "pnpm --filter @kandinsky/kiosk build && pnpm --filter @kandinsky/shell start"
   },
   "devDependencies": {
     "typescript": "^5.6.3"

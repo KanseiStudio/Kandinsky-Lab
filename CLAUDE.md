@@ -31,7 +31,10 @@ apps/kiosk     frontend dell'esperienza (nessun framework UI, DOM diretto)
   src/audio      Tone.js: teoria, timbri, compositore, sonificazione del tratto
 apps/server    API locale, coda di invio, retention dei dati personali
                (SQLite via `node:sqlite`, nessun modulo nativo)
-apps/shell     Electron: fullscreen, no screensaver, auto-restart
+apps/shell     Electron: fullscreen, no screensaver, riavvio automatico.
+               Serve l'esperienza da un server interno su 127.0.0.1, non da
+               file://, perché con quel protocollo i moduli ES e le richieste
+               verso /content falliscono per le regole di origine.
 packages/schema  Zod: unica fonte di verità dei tipi, condivisa fra kiosk e server
 packages/content elements.json, palettes.json, didactics.json, brushes.json,
                  sound.json, assets/
@@ -141,6 +144,15 @@ che deve restare aperto o i servizi di hosting riavviano l'applicazione in ciclo
 cui esiste `app/uuid.ts`. Vale per qualunque cosa si aggiunga in futuro.
 
 ## Trappole di tipo
+
+**`vite build` non controlla i tipi**, trascrive e basta. Per questo la build del
+kiosk è `tsc --noEmit && vite build`: senza, un oggetto a cui manca una proprietà
+obbligatoria passa la compilazione e fallisce nel browser.
+
+**`maxPolyphony` non è un'opzione di voce.** `new Tone.PolySynth(Tone.Synth, opts)`
+passa le opzioni alla singola voce; `maxPolyphony` è una proprietà del PolySynth
+e va assegnata dopo la costruzione. Messa fra le opzioni viene ignorata in
+silenzio, e ogni timbro resta sul predefinito di 32 voci.
 
 **Il server si compila con esbuild, non con `tsc`.** `tsc` non riscrive gli alias
 di `paths`, quindi l'import di `@kandinsky/schema` resterebbe nel JavaScript

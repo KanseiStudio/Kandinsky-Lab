@@ -41,6 +41,8 @@ export type VoicePool = Record<Timbre, VoiceRig>;
 
 interface Spec {
   build: () => Voice;
+  /** voci simultanee del PolySynth; non è un'opzione della singola voce */
+  polyphony?: number;
   stack: Array<[number, number]>;
   brightness: [number, number];
   spread: number;
@@ -50,9 +52,9 @@ interface Spec {
 const SPECS: Record<Timbre, Spec> = {
   /** Corda pizzicata: fondamentale netta, ottava e dodicesima brevi sopra. */
   pluck: {
+    polyphony: 16,
     build: () =>
       new Tone.PolySynth(Tone.Synth, {
-        maxPolyphony: 16,
         oscillator: { type: "fattriangle", count: 2, spread: 12 },
         envelope: { attack: 0.003, decay: 0.9, sustain: 0.04, release: 1.4 },
       }),
@@ -63,9 +65,9 @@ const SPECS: Record<Timbre, Spec> = {
 
   /** Campana: armonici inarmonici, è ciò che la rende metallica. */
   bell: {
+    polyphony: 12,
     build: () =>
       new Tone.PolySynth(Tone.FMSynth, {
-        maxPolyphony: 12,
         harmonicity: 2.5,
         modulationIndex: 6,
         envelope: { attack: 0.004, decay: 2.2, sustain: 0, release: 3.2 },
@@ -78,9 +80,9 @@ const SPECS: Record<Timbre, Spec> = {
 
   /** Tappeto: quinta e ottava sopra la fondamentale, attacco lentissimo. */
   pad: {
+    polyphony: 16,
     build: () =>
       new Tone.PolySynth(Tone.Synth, {
-        maxPolyphony: 16,
         oscillator: { type: "fatsine", count: 3, spread: 22 },
         envelope: { attack: 1.6, decay: 1.2, sustain: 0.7, release: 4.5 },
       }),
@@ -92,9 +94,9 @@ const SPECS: Record<Timbre, Spec> = {
 
   /** Ancia: spettro ricco di dispari, filtro stretto che la rende nasale. */
   reed: {
+    polyphony: 12,
     build: () =>
       new Tone.PolySynth(Tone.Synth, {
-        maxPolyphony: 12,
         oscillator: { type: "fatsquare", count: 2, spread: 16 },
         envelope: { attack: 0.09, decay: 0.5, sustain: 0.55, release: 1.3 },
       }),
@@ -106,9 +108,9 @@ const SPECS: Record<Timbre, Spec> = {
 
   /** Ottone: apre molto con la dinamica, ed è il suo tratto caratteristico. */
   brass: {
+    polyphony: 10,
     build: () =>
       new Tone.PolySynth(Tone.Synth, {
-        maxPolyphony: 10,
         oscillator: { type: "fatsawtooth", count: 3, spread: 18 },
         envelope: { attack: 0.05, decay: 0.35, sustain: 0.5, release: 0.9 },
       }),
@@ -120,9 +122,9 @@ const SPECS: Record<Timbre, Spec> = {
 
   /** Arco: attacco lento, ottava sopra sottile. */
   bow: {
+    polyphony: 10,
     build: () =>
       new Tone.PolySynth(Tone.AMSynth, {
-        maxPolyphony: 10,
         harmonicity: 1.5,
         oscillator: { type: "fatsawtooth", count: 2, spread: 10 },
         envelope: { attack: 0.75, decay: 0.6, sustain: 0.85, release: 3.4 },
@@ -134,9 +136,9 @@ const SPECS: Record<Timbre, Spec> = {
 
   /** Legno percosso: quasi tutto nell'attacco, armonici alti e cortissimi. */
   mallet: {
+    polyphony: 16,
     build: () =>
       new Tone.PolySynth(Tone.Synth, {
-        maxPolyphony: 16,
         oscillator: { type: "sine" },
         envelope: { attack: 0.001, decay: 0.5, sustain: 0, release: 0.5 },
       }),
@@ -160,9 +162,9 @@ const SPECS: Record<Timbre, Spec> = {
 
   /** Fondo: solo fondamentale e una quinta appena accennata. */
   sub: {
+    polyphony: 4,
     build: () =>
       new Tone.PolySynth(Tone.Synth, {
-        maxPolyphony: 4,
         oscillator: { type: "fatsine", count: 2, spread: 8 },
         envelope: { attack: 0.4, decay: 0.6, sustain: 0.9, release: 2.6 },
       }),
@@ -186,6 +188,8 @@ export function buildVoices(destination: Tone.ToneAudioNode): VoicePool {
     }).connect(panner);
 
     const synth = spec.build();
+    // Va impostata sull'oggetto, non fra le opzioni della voce.
+    if (spec.polyphony && isPitched(synth)) synth.maxPolyphony = spec.polyphony;
     synth.connect(filter);
 
     pool[key] = {

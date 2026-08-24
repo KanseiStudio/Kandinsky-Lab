@@ -71,7 +71,9 @@ export default defineConfig({
   build: {
     target: "chrome120",
     assetsInlineLimit: 0,
-    sourcemap: true,
+    // Le mappe pesano più del bundle e vengono trasferite a ogni rilascio.
+    // In locale restano, così `pnpm dev` e `pnpm app:dev` sono debuggabili.
+    sourcemap: process.env.CI ? false : true,
     rollupOptions: {
       output: {
         // Tone e Konva pesano quanto tutto il resto e non cambiano mai:

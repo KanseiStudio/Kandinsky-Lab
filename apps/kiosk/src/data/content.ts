@@ -58,6 +58,7 @@ export async function loadContent(base = "/content"): Promise<Content> {
   }
 
   return {
+    config: parsedConfig,
     sets: parsedElements.sets,
     elements: parsedElements.elements
       .filter((e) => e.enabled),

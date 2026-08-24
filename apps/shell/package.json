@@ -5,7 +5,9 @@
   "main": "main.cjs",
   "scripts": {
     "start": "electron .",
-    "package": "electron-builder --win --x64"
+    "pack:mac": "electron-builder --mac --arm64 --x64",
+    "pack:win": "electron-builder --win --x64",
+    "pack:dir": "electron-builder --dir"
   },
   "devDependencies": {
     "electron": "^33.0.2",
@@ -14,8 +16,50 @@
   "build": {
     "appId": "it.kanseistudio.kandinskylab",
     "productName": "Kandinsky Lab",
-    "files": ["main.cjs", "preload.cjs", "dist/**"],
-    "extraResources": [{ "from": "../../packages/content", "to": "content" }],
-    "win": { "target": "nsis" }
+    "copyright": "\u00a9 Kansei Studio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.cjs",
+      "server.cjs"
+    ],
+    "extraResources": [
+      {
+        "from": "../kiosk/dist",
+        "to": "kiosk"
+      },
+      {
+        "from": "../../packages/content",
+        "to": "content"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.education",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "darkModeSupport": false,
+      "extendInfo": {
+        "NSHighResolutionCapable": true,
+        "LSUIElement": false
+      }
+    },
+    "dmg": {
+      "title": "Kandinsky Lab"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Education"
+    }
   }
 }
