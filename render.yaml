@@ -1,0 +1,95 @@
+# Configurazione Render per Kandinsky Lab
+#
+# Un solo servizio web: il processo Node serve l'esperienza compilata,
+# i contenuti e le API. Un dominio, una password, HTTPS automatico.
+#
+# CONFIGURAZIONE PER ANTEPRIMA (piano Hobby, senza disco persistente).
+#
+# Le opere salvate non sopravvivono ai riavvii: il filesystem è effimero.
+# Per questa fase va bene, perché ciò che si deve provare è l'esperienza —
+# disegno, forme, musica, coda finale — non l'archivio.
+#
+# Per passare alla configurazione definitiva servono un piano a pagamento e
+# le tre righe indicate in fondo al file.
+
+services:
+  - type: web
+    name: kandinsky-lab
+    runtime: node
+    plan: free             # i dischi persistenti richiedono un piano a pagamento
+    region: frankfurt      # il più vicino all'Italia
+    branch: main
+
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build
+    startCommand: pnpm start
+
+    # Render lo interroga senza credenziali: per questo l'autenticazione
+    # di base lascia passare /api/health.
+    healthCheckPath: /api/health
+
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+
+      # Senza disco persistente si scrive nel filesystem temporaneo:
+      # funziona, ma si azzera a ogni riavvio.
+      - key: DATA_DIR
+        value: /tmp/kandinsky
+
+      # --- Accesso -------------------------------------------------------
+      - key: APP_USER
+        value: kandinsky
+      - key: APP_PASSWORD
+        sync: false        # da inserire a mano nel pannello, non nel repository
+
+      # --- Posta ---------------------------------------------------------
+      # Attenzione: Render blocca le porte SMTP in uscita sui piani bassi.
+      # Se le opere restano in coda con errori di connessione, è quello.
+      # Vedi la sezione dedicata in docs/deploy.md.
+      - key: SMTP_HOST
+        value: mail.kansei-studio.com
+      - key: SMTP_PORT
+        value: "465"
+      - key: SMTP_SECURE
+        value: "true"
+      - key: SMTP_USER
+        value: info@kansei-studio.com
+      # Lasciare VUOTA per l'anteprima: Render blocca le porte SMTP in uscita
+      # sui piani bassi. Senza password il server parte, lo dichiara a console
+      # e accoda le opere senza tentare invii destinati a fallire.
+      - key: SMTP_PASS
+        sync: false
+      - key: MAIL_FROM
+        value: Kandinsky Lab <info@kansei-studio.com>
+      - key: MUSEUM_NAME
+        value: Kansei Studio
+      - key: MUSEUM_URL
+        value: https://www.kansei-studio.com
+
+      # Pagina di riascolto: lasciare vuoto finché non esiste, o l'e-mail
+      # conterrebbe un collegamento rotto.
+      - key: LISTEN_BASE_URL
+        value: ""
+
+      # --- Conservazione dei dati ---------------------------------------
+      - key: PURGE_EMAIL_AFTER_MIN
+        value: "60"
+      - key: PURGE_IMAGES_AFTER_DAYS
+        value: "30"
+
+# ---------------------------------------------------------------------------
+# Per la configurazione definitiva, con archivio delle opere che sopravvive
+# ai riavvii: passare a un piano a pagamento e rimettere
+#
+#     plan: starter
+#     disk:
+#       name: dati
+#       mountPath: /var/data
+#       sizeGB: 1
+#
+# riportando DATA_DIR a /var/data.
+#
+# Nota sul piano gratuito: il servizio va in letargo dopo un quarto d'ora di
+# inattività e la prima richiesta successiva impiega una trentina di secondi.
+# Va detto a chi prova, o penserà che sia rotto.
+# ---------------------------------------------------------------------------
