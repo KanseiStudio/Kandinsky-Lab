@@ -1,0 +1,61 @@
+/* --------------------------------------------------------------------------
+   Kandinsky Lab — sistema di token
+   Direzione: Bauhaus di Dessau, non "arte per bambini".
+   I bambini non hanno bisogno di essere infantilizzati: hanno bisogno di
+   contrasto alto, target grandi e gerarchia chiara. Il resto è il quadro.
+   -------------------------------------------------------------------------- */
+
+/* I font sono importati da main.ts, non da qui.
+   Un `@import` con nome di pacchetto finisce a postcss-import, che lo tratta
+   come percorso relativo alla cartella del foglio di stile e non lo trova.
+   Gli import di CSS da npm vanno fatti da JavaScript, dove se ne occupa il
+   resolver di Vite. */
+
+:root {
+  /* Colore ------------------------------------------------------------- */
+  --ink: #141414;          /* nero tipografico, mai #000 */
+  --paper: #f7f3e8;        /* la tela */
+  --shell: #e4ded0;        /* i pannelli attorno alla tela */
+  --shell-deep: #cfc7b4;   /* separatori, bordi */
+  --cobalt: #1b3a93;
+  --cadmium: #f2c300;
+  --vermilion: #d62828;
+  --muted: #5a5347;
+
+  /* Tipografia --------------------------------------------------------- */
+  /* I fallback contano: se un font non carica, l'interfaccia deve restare
+     leggibile invece di ricadere su un serif di sistema. */
+  --font-display: "Bricolage Grotesque Variable", "Bricolage Grotesque",
+                  "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-ui: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --step-hero: 92px;
+  --step-title: 44px;
+  --step-lead: 28px;
+  --step-body: 21px;
+  --step-label: 15px;
+
+  /* Spazio: griglia da 8, il tavolo è grande e i vuoti sono utili --------- */
+  --s1: 8px;
+  --s2: 16px;
+  --s3: 24px;
+  --s4: 40px;
+  --s5: 64px;
+
+  /* Target touch: 88px minimo. Un bambino di 5 anni non ha la precisione
+     di un adulto, e sul vetro orizzontale il dito arriva più piatto. ----- */
+  --touch: 88px;
+  --touch-lg: 116px;
+
+  --radius: 0px;          /* Bauhaus: niente angoli morbidi, tranne i cerchi */
+  --radius-round: 999px;
+
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,1162 @@
+{
+  "version": 3,
+  "globalCooldownMs": 4000,
+  "cards": [
+    {
+      "id": "card_intersecting_lines__01_01_pianeta_blu",
+      "title": {
+        "it": "Cerchio blu con linee diagonali",
+        "en": "Cerchio blu con linee diagonali"
+      },
+      "body": {
+        "it": "Per Kandinsky il blu tende alla profondità e al raccoglimento; la forma circolare accentua una tensione concentrica. Il frammento non è documentato come “pianeta”."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__01_01_pianeta_blu"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_intersecting_lines__02_02_griglia_rombo",
+      "title": {
+        "it": "Reticolo di linee diagonali",
+        "en": "Reticolo di linee diagonali"
+      },
+      "body": {
+        "it": "La linea, nella teoria di Kandinsky, unisce tensione e direzione. L'incrocio di più diagonali produce quindi un campo di forze visive; non è documentato un significato oggettuale specifico."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__02_02_griglia_rombo"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_intersecting_lines__03_03_triangolo_rosso",
+      "title": {
+        "it": "Triangolo rosso",
+        "en": "Triangolo rosso"
+      },
+      "body": {
+        "it": "Il triangolo è una delle forme piane fondamentali di Kandinsky e si pone in forte contrasto con il cerchio. Il rosso è descritto come un colore di energia intensa che agisce soprattutto “dall'interno”."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__03_03_triangolo_rosso"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_intersecting_lines__04_04_zigzag_nero",
+      "title": {
+        "it": "Linea angolare nera",
+        "en": "Linea angolare nera"
+      },
+      "body": {
+        "it": "Una linea angolare nasce da cambi di direzione e concentra tensioni diverse. Il nero, nella teoria cromatica di Kandinsky, è associato a immobilità e silenzio profondo."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__04_04_zigzag_nero"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_intersecting_lines__05_05_anello_centrale",
+      "title": {
+        "it": "Anello / forma circolare concentrica",
+        "en": "Anello / forma circolare concentrica"
+      },
+      "body": {
+        "it": "Kandinsky descrive il cerchio come il risultato della tendenza di una curva a chiudersi. La forma porta quindi una tensione raccolta e autocontenuta; nessun significato iconografico specifico è documentato."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__05_05_anello_centrale"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_intersecting_lines__06_06_cerchio_arancio",
+      "title": {
+        "it": "Cerchio arancione",
+        "en": "Cerchio arancione"
+      },
+      "body": {
+        "it": "L'arancione è descritto da Kandinsky come un rosso reso più attivo dal giallo, quindi più spinto verso l'esterno. La forma circolare introduce invece una struttura chiusa e concentrica."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__06_06_cerchio_arancio"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_intersecting_lines__07_07_pannello_sinistro",
+      "title": {
+        "it": "Aggregato di piani, linee e colori",
+        "en": "Aggregato di piani, linee e colori"
+      },
+      "body": {
+        "it": "Il frammento va letto come rapporto tra linee, piani e colori, gli elementi fondamentali dell'analisi di Kandinsky. Non esiste una fonte consultata che lo identifichi come un oggetto preciso."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__07_07_pannello_sinistro"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_intersecting_lines__08_08_ovale_dest",
+      "title": {
+        "it": "Sistema di curve e piani sul lato destro",
+        "en": "Sistema di curve e piani sul lato destro"
+      },
+      "body": {
+        "it": "Per Kandinsky la curva nasce dall'azione continua di forze e contiene una tendenza alla chiusura, fino alla formazione del piano circolare. Il frammento non ha un significato figurativo specifico documentato."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__08_08_ovale_dest"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_intersecting_lines__09_09_loop_inferiore",
+      "title": {
+        "it": "Linea curva ad anello",
+        "en": "Linea curva ad anello"
+      },
+      "body": {
+        "it": "La linea curva è per Kandinsky una forma elastica, prodotta da pressioni continue, e tende a chiudersi in un piano. Qui il valore è formale e dinamico, non narrativo."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__09_09_loop_inferiore"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_intersecting_lines__10_10_ovale_arancio",
+      "title": {
+        "it": "Forma ovale arancione",
+        "en": "Forma ovale arancione"
+      },
+      "body": {
+        "it": "Il colore arancione unisce la spinta del giallo all'energia interna del rosso; la curva ovale aggiunge una tensione di chiusura. Nessun oggetto specifico è documentato."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "intersecting_lines__10_10_ovale_arancio"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__01_01_strisce_ondulate",
+      "title": {
+        "it": "Strisce ondulate parallele",
+        "en": "Strisce ondulate parallele"
+      },
+      "body": {
+        "it": "Le linee curve sono generate, per Kandinsky, da forze continue che deviano la retta. La loro ripetizione costruisce una sequenza di tensioni; non è documentato un significato figurativo specifico."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__01_01_strisce_ondulate"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__02_02_triangolo_grande",
+      "title": {
+        "it": "Grande triangolo",
+        "en": "Grande triangolo"
+      },
+      "body": {
+        "it": "Il triangolo è una forma piana primaria e, negli scritti di Kandinsky, costituisce il massimo contrasto formale con il cerchio. La sua struttura angolare produce una forte direzionalità."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__02_02_triangolo_grande"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__03_03_cerchio_blu",
+      "title": {
+        "it": "Cerchio blu",
+        "en": "Cerchio blu"
+      },
+      "body": {
+        "it": "È una combinazione particolarmente coerente con il sistema di Kandinsky: il blu tende alla profondità e al raccoglimento, mentre il cerchio è una forma chiusa e concentrica."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__03_03_cerchio_blu"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__04_04_cerchio_arancio",
+      "title": {
+        "it": "Cerchio arancione",
+        "en": "Cerchio arancione"
+      },
+      "body": {
+        "it": "L'arancione deriva, nella teoria di Kandinsky, dal rosso attivato dal giallo; tende quindi verso una maggiore espansione. Il cerchio gli contrappone una forma raccolta e chiusa."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__04_04_cerchio_arancio"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__05_05_cerchio_verde",
+      "title": {
+        "it": "Cerchio verde",
+        "en": "Cerchio verde"
+      },
+      "body": {
+        "it": "Kandinsky descrive il verde, equilibrio di giallo e blu, come un colore statico e riposante. La forma circolare rafforza la sensazione di concentrazione e stabilità."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__05_05_cerchio_verde"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__06_06_rettangolo_strisce",
+      "title": {
+        "it": "Rettangolo a fasce orizzontali",
+        "en": "Rettangolo a fasce orizzontali"
+      },
+      "body": {
+        "it": "Nel sistema di Kandinsky la linea orizzontale ha un carattere relativamente freddo e passivo. La successione di fasce mette in evidenza la relazione tra direzione lineare e divisione del piano."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__06_06_rettangolo_strisce"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__07_07_archi_blu",
+      "title": {
+        "it": "Archi blu",
+        "en": "Archi blu"
+      },
+      "body": {
+        "it": "Le curve introducono elasticità e una tendenza alla chiusura; il blu aggiunge profondità e movimento verso l'interno. Non è documentato un significato figurativo specifico."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__07_07_archi_blu"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__08_08_colonna_cerchi",
+      "title": {
+        "it": "Sequenza verticale di cerchi",
+        "en": "Sequenza verticale di cerchi"
+      },
+      "body": {
+        "it": "Il punto e le forme circolari sono descritti da Kandinsky come unità concentrate e autocontenute. La successione di più unità crea un rapporto ritmico e spaziale, non un simbolo univoco."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__08_08_colonna_cerchi"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__09_09_griglia_colori",
+      "title": {
+        "it": "Griglia di piani colorati",
+        "en": "Griglia di piani colorati"
+      },
+      "body": {
+        "it": "La suddivisione del piano in unità geometriche permette di confrontare pesi, tensioni e rapporti cromatici. Il significato nasce dall'interazione tra le parti, non da un oggetto rappresentato."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__09_09_griglia_colori"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__10_10_curva_rosa",
+      "title": {
+        "it": "Grande forma curva rosa",
+        "en": "Grande forma curva rosa"
+      },
+      "body": {
+        "it": "La curva porta, secondo Kandinsky, una tensione elastica e la possibilità di trasformarsi in piano. Non è attribuito qui un significato specifico al rosa, perché non è documentato per questo frammento."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__10_10_curva_rosa"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_opera_verticale__11_11_cluster_centrale",
+      "title": {
+        "it": "Aggregato geometrico centrale",
+        "en": "Aggregato geometrico centrale"
+      },
+      "body": {
+        "it": "Il frammento combina piani, linee e colori: i tre ambiti che Kandinsky analizza come componenti della costruzione pittorica. Non è documentata un'identificazione figurativa specifica."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "opera_verticale__11_11_cluster_centrale"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_gelb_rot_blau__01_01_cluster_sinistro",
+      "title": {
+        "it": "Aggregato geometrico sinistro",
+        "en": "Aggregato geometrico sinistro"
+      },
+      "body": {
+        "it": "Fa parte della zona sinistra dell'opera, che il Centre Pompidou descrive come più geometrica e luminosa rispetto alla parte destra. Il suo valore è quindi soprattutto compositivo e di contrasto."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "gelb_rot_blau__01_01_cluster_sinistro"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_gelb_rot_blau__02_02_anello_grigio",
+      "title": {
+        "it": "Anello grigio",
+        "en": "Anello grigio"
+      },
+      "body": {
+        "it": "Kandinsky descrive il grigio come immobile e privo di movimento attivo. La forma circolare aggiunge una struttura chiusa e concentrica."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "gelb_rot_blau__02_02_anello_grigio"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_gelb_rot_blau__03_03_cerchio_nero_rosso",
+      "title": {
+        "it": "Cerchio nero con centro rosso",
+        "en": "Cerchio nero con centro rosso"
+      },
+      "body": {
+        "it": "Il rosso possiede per Kandinsky un'energia interna intensa; il nero introduce un forte silenzio e contrasto. La struttura circolare mantiene l'insieme concentrato."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "gelb_rot_blau__03_03_cerchio_nero_rosso"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_gelb_rot_blau__04_04_cluster_centrale",
+      "title": {
+        "it": "Aggregato centrale di piani",
+        "en": "Aggregato centrale di piani"
+      },
+      "body": {
+        "it": "Questo gruppo partecipa all'equilibrio tra elementi opposti che il Centre Pompidou riconosce come principio della composizione. Non è documentato come oggetto figurativo."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "gelb_rot_blau__04_04_cluster_centrale"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_gelb_rot_blau__05_05_vortice_dest",
+      "title": {
+        "it": "Sistema curvilineo della zona destra",
+        "en": "Sistema curvilineo della zona destra"
+      },
+      "body": {
+        "it": "Appartiene alla parte destra, descritta dal Centre Pompidou come più complessa, curvilinea e scura rispetto alla sinistra. “Vortice” è soltanto un nome tecnico del file, non una denominazione di Kandinsky."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "gelb_rot_blau__05_05_vortice_dest"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_gelb_rot_blau__06_06_linee_inferiori",
+      "title": {
+        "it": "Reticolo di linee inferiori",
+        "en": "Reticolo di linee inferiori"
+      },
+      "body": {
+        "it": "Per Kandinsky la linea è definita da tensione e direzione. L'incrocio di rette e diagonali crea quindi una rete di forze visive all'interno della composizione."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "gelb_rot_blau__06_06_linee_inferiori"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_gelb_rot_blau__07_07_griglia_dest",
+      "title": {
+        "it": "Griglia di linee e piani a destra",
+        "en": "Griglia di linee e piani a destra"
+      },
+      "body": {
+        "it": "La combinazione di rette, incroci e piccoli piani intensifica la complessità della zona destra dell'opera, in accordo con la lettura curatoriale del Centre Pompidou."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "gelb_rot_blau__07_07_griglia_dest"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_gelb_rot_blau__08_08_cerchio_grigio_basso",
+      "title": {
+        "it": "Cerchio grigio inferiore",
+        "en": "Cerchio grigio inferiore"
+      },
+      "body": {
+        "it": "Il grigio è definito da Kandinsky come statico e silenzioso; il cerchio è una forma concentrica. La combinazione produce quindi un elemento formalmente raccolto e poco espansivo."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "gelb_rot_blau__08_08_cerchio_grigio_basso"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_gelb_rot_blau__09_09_scacchiera",
+      "title": {
+        "it": "Piccola griglia di piani colorati",
+        "en": "Piccola griglia di piani colorati"
+      },
+      "body": {
+        "it": "I piccoli piani colorati funzionano come contrasti cromatici interni alla composizione. Non è documentato che rappresentino una scacchiera: il termine era solo un'etichetta tecnica del ritaglio."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "gelb_rot_blau__09_09_scacchiera"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__01_01_blob_giallo_arancio",
+      "title": {
+        "it": "Forma organica giallo-arancione",
+        "en": "Forma organica giallo-arancione"
+      },
+      "body": {
+        "it": "Il giallo è per Kandinsky un colore espansivo e aggressivo; l'arancione conserva l'energia del rosso ma viene spinto verso l'esterno dal giallo. Non è documentato un significato oggettuale specifico."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__01_01_blob_giallo_arancio"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__02_02_catena_cerchi",
+      "title": {
+        "it": "Sequenza di piccoli cerchi",
+        "en": "Sequenza di piccoli cerchi"
+      },
+      "body": {
+        "it": "Le forme puntiformi e circolari sono unità concentrate e autocontenute. La ripetizione costruisce una relazione tra più tensioni, senza implicare un significato figurativo univoco."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__02_02_catena_cerchi"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__03_03_rombo_verde",
+      "title": {
+        "it": "Rombo verde",
+        "en": "Rombo verde"
+      },
+      "body": {
+        "it": "Il verde è descritto da Kandinsky come un colore di equilibrio e quiete. La forma angolare, invece, introduce direzione e tensione, creando un contrasto tra colore e geometria."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__03_03_rombo_verde"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__04_04_razzo_circolare",
+      "title": {
+        "it": "Combinazione di cerchio e triangolo",
+        "en": "Combinazione di cerchio e triangolo"
+      },
+      "body": {
+        "it": "Cerchio e triangolo sono indicati da Kandinsky come forme piane fortemente contrastanti. Il nome “razzo” non ha base documentaria ed è solo un'etichetta tecnica del file."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__04_04_razzo_circolare"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__05_05_blob_dest",
+      "title": {
+        "it": "Tratto nero curvilineo",
+        "en": "Tratto nero curvilineo"
+      },
+      "body": {
+        "it": "La curva porta una tensione elastica e continua; il nero, per Kandinsky, corrisponde a un silenzio profondo e immobile. Nessun oggetto specifico è documentato."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__05_05_blob_dest"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__06_06_triangolo_nero",
+      "title": {
+        "it": "Grande triangolo nero",
+        "en": "Grande triangolo nero"
+      },
+      "body": {
+        "it": "Il triangolo è una delle forme piane primarie e si contrappone fortemente al cerchio. Il nero accentua il carattere di contrasto e immobilità."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__06_06_triangolo_nero"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__07_07_onde_centrali",
+      "title": {
+        "it": "Linee ondulate parallele",
+        "en": "Linee ondulate parallele"
+      },
+      "body": {
+        "it": "Le linee curve derivano da pressioni continue che deviano la retta. La ripetizione di più curve genera una sequenza visiva di tensioni e direzioni."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__07_07_onde_centrali"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__08_08_simbolo_rosso",
+      "title": {
+        "it": "Forma rossa isolata",
+        "en": "Forma rossa isolata"
+      },
+      "body": {
+        "it": "Il rosso è descritto da Kandinsky come un colore di forte energia interna. Non è possibile certificare che la forma sia una lettera o un simbolo: nessuna fonte consultata lo documenta."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__08_08_simbolo_rosso"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__09_09_triangolo_piccolo",
+      "title": {
+        "it": "Piccolo triangolo nero",
+        "en": "Piccolo triangolo nero"
+      },
+      "body": {
+        "it": "La forma triangolare concentra una forte direzionalità e appartiene alle forme piane fondamentali analizzate da Kandinsky. Il nero introduce un contrasto netto con lo sfondo."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__09_09_triangolo_piccolo"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__10_10_quadrato_viola",
+      "title": {
+        "it": "Quadrato viola",
+        "en": "Quadrato viola"
+      },
+      "body": {
+        "it": "Kandinsky descrive il viola come un rosso raffreddato dal blu, quindi più passivo e ritirato. Il quadrato è una delle forme piane primarie insegnate nel contesto Bauhaus."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__10_10_quadrato_viola"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_small_worlds__11_11_blob_basso_dest",
+      "title": {
+        "it": "Forma cromatica irregolare",
+        "en": "Forma cromatica irregolare"
+      },
+      "body": {
+        "it": "Per questo frammento non è documentato un significato simbolico specifico. In termini kandinskiani, il suo ruolo può essere descritto soltanto attraverso forma, colore e relazione con gli elementi vicini."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "small_worlds__11_11_blob_basso_dest"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_delicate_tension__01_01_triangolo_arancio",
+      "title": {
+        "it": "Grande piano triangolare con area arancione",
+        "en": "Grande piano triangolare con area arancione"
+      },
+      "body": {
+        "it": "Il triangolo introduce una forte tensione angolare e si contrappone al cerchio, contrasto esplicitamente ricordato dal Museo Thyssen per quest'opera. L'arancione conserva l'energia del rosso attivata dal giallo."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "delicate_tension__01_01_triangolo_arancio"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_delicate_tension__02_02_cerchio_blu",
+      "title": {
+        "it": "Cerchio blu",
+        "en": "Cerchio blu"
+      },
+      "body": {
+        "it": "Il blu tende alla profondità e al raccoglimento; il cerchio è una forma chiusa e concentrica. È una delle associazioni più coerenti con il sistema formale e cromatico di Kandinsky."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "delicate_tension__02_02_cerchio_blu"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_delicate_tension__03_03_polo_superiore",
+      "title": {
+        "it": "Nodo superiore con linee convergenti",
+        "en": "Nodo superiore con linee convergenti"
+      },
+      "body": {
+        "it": "Il punto concentra la tensione senza una direzione propria; le linee, invece, aggiungono direzione. L'incrocio delle linee attorno a un centro rende visibile questa distinzione teorica."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "delicate_tension__03_03_polo_superiore"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_delicate_tension__04_04_cerchio_nero_rosso",
+      "title": {
+        "it": "Cerchio nero con centro rosso",
+        "en": "Cerchio nero con centro rosso"
+      },
+      "body": {
+        "it": "Il rosso esprime energia interna, mentre il nero è associato a immobilità e silenzio. La forma circolare raccoglie il contrasto in una struttura concentrica."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "delicate_tension__04_04_cerchio_nero_rosso"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_delicate_tension__05_05_scacchiera_centrale",
+      "title": {
+        "it": "Griglia centrale di piani geometrici",
+        "en": "Griglia centrale di piani geometrici"
+      },
+      "body": {
+        "it": "La composizione dell'opera è descritta dal Thyssen come fortemente geometrica. La griglia mette in relazione piani, linee e contrasti cromatici; non è documentato che rappresenti una scacchiera."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "delicate_tension__05_05_scacchiera_centrale"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_delicate_tension__06_06_semicerchio_giallo",
+      "title": {
+        "it": "Piano curvo giallo",
+        "en": "Piano curvo giallo"
+      },
+      "body": {
+        "it": "Il giallo tende, secondo Kandinsky, a espandersi verso l'esterno; la curva porta invece una tendenza alla chiusura. L'elemento unisce quindi due tensioni formali differenti."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "delicate_tension__06_06_semicerchio_giallo"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_delicate_tension__07_07_linee_sinistre",
+      "title": {
+        "it": "Rete di linee a sinistra",
+        "en": "Rete di linee a sinistra"
+      },
+      "body": {
+        "it": "Kandinsky definisce la linea tramite due componenti: tensione e direzione. L'insieme di rette e diagonali costruisce un campo di forze visive coerente con questa teoria."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "delicate_tension__07_07_linee_sinistre"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_delicate_tension__08_08_nodi_basso_dest",
+      "title": {
+        "it": "Piccoli nodi e linee in basso a destra",
+        "en": "Piccoli nodi e linee in basso a destra"
+      },
+      "body": {
+        "it": "Il punto è una forma concentrata e senza direzione; quando viene attraversato o accompagnato da linee, a quella tensione si aggiungono direzioni precise. Il significato è formale, non figurativo."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "delicate_tension__08_08_nodi_basso_dest"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_delicate_tension__09_09_orbita_bianca",
+      "title": {
+        "it": "Curva chiusa / semicircolare con linee",
+        "en": "Curva chiusa / semicircolare con linee"
+      },
+      "body": {
+        "it": "La curva contiene, per Kandinsky, il germe del piano e può arrivare a chiudersi nel cerchio. Il termine “orbita” è solo un'etichetta tecnica del file e non una denominazione documentata."
+      },
+      "trigger": {
+        "on": "element_first_use",
+        "elementId": "delicate_tension__09_09_orbita_bianca"
+      },
+      "duration": 7000,
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 5,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_music",
+      "title": {
+        "it": "Colori che suonano",
+        "en": "Colours that sound"
+      },
+      "body": {
+        "it": "Kandinsky ascoltava la musica e vedeva colori. Diceva che il giallo squillava come una tromba.",
+        "en": "Kandinsky heard music and saw colours. He said yellow blared like a trumpet."
+      },
+      "trigger": {
+        "on": "color_first_use",
+        "swatchId": "cadmium"
+      },
+      "duration": 6000,
+      "priority": 12,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_bauhaus",
+      "title": {
+        "it": "La scuola delle forme",
+        "en": "The school of forms"
+      },
+      "body": {
+        "it": "Per anni Kandinsky insegnò al Bauhaus. Agli studenti chiedeva: di che colore è un triangolo? Non c'era una risposta giusta.",
+        "en": "Kandinsky taught at the Bauhaus for years. He asked his students: what colour is a triangle? There was no right answer."
+      },
+      "trigger": {
+        "on": "placement_count",
+        "count": 6
+      },
+      "duration": 7000,
+      "priority": 3,
+      "maxPerSession": 1,
+      "enabled": true
+    },
+    {
+      "id": "card_complete",
+      "title": {
+        "it": "Hai fatto una cosa nuova",
+        "en": "You made something new"
+      },
+      "body": {
+        "it": "Nessuno aveva mai messo insieme queste forme in questo modo. La tua opera non esisteva prima di adesso.",
+        "en": "Nobody had ever put these shapes together this way. Your artwork did not exist before now."
+      },
+      "trigger": {
+        "on": "artwork_complete"
+      },
+      "duration": 8000,
+      "priority": 0,
+      "maxPerSession": 1,
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "kioskId": "kiosk-01",
+  "locale": "it",
+  "fallbackLocale": "en",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "artboard": {
+      "x": 404,
+      "y": 148,
+      "width": 1420,
+      "height": 784
+    },
+    "exportPixelRatio": 3
+  },
+  "mirrorToolbars": false,
+  "maxPlacements": 60,
+  "paletteId": "giallo_rosso_blu",
+  "idle": {
+    "warningAfterSec": 90,
+    "resetAfterSec": 20
+  },
+  "email": {
+    "enabled": true,
+    "consentVersion": "1.0"
+  },
+  "server": {
+    "baseUrl": "http://localhost:8787",
+    "timeoutMs": 8000
+  },
+  "debug": false,
+  "audio": {
+    "enabled": true,
+    "unlockOn": "start_button",
+    "maxGain": -6
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "@kandinsky/content",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Contenuti di sala: elementi, tavolozze, didascalie. Modificabili senza rebuild."
+}

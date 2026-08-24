@@ -1,0 +1,509 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--ink);
+  font-family: var(--font-ui);
+  color: var(--ink);
+  /* Chiosco: niente selezione testo, niente menu contestuale, niente callout */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: none; /* nessun mouse in sala */
+}
+
+#frame {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: top left;
+  background: var(--shell);
+  overflow: hidden;
+}
+
+#stage-host { position: absolute; inset: 0; }
+#ui-root { position: absolute; inset: 0; pointer-events: none; }
+#ui-root > * { pointer-events: auto; }
+
+/* --- Colonna strumenti ----------------------------------------------------- */
+/* Tutti gli strumenti da un lato solo: su un tavolo orizzontale due colonne
+   stringono la tela da entrambi i lati e obbligano il bambino ad attraversare
+   il piano per passare da un colore a una forma. */
+.panel--tools {
+  position: absolute;
+  left: 24px;
+  top: 148px;
+  width: 344px;
+  height: 784px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  /* min-height: 0 è indispensabile perché il vassoio possa scorrere:
+     senza, il figlio flex si espande e la colonna esce dallo schermo. */
+  min-height: 0;
+}
+
+.panel--tools > .panel__label { flex: 0 0 auto; }
+
+.panel__label {
+  font-family: var(--font-display);
+  font-size: var(--step-label);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-left: 4px;
+}
+
+/* --- Tavolozza ------------------------------------------------------------ */
+.swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s1); flex: 0 0 auto; }
+.swatch {
+  width: 78px;
+  height: 78px;
+  border: none;
+  border-radius: var(--radius-round);
+  box-shadow: inset 0 0 0 2px rgba(20, 20, 20, 0.18);
+  transition: transform 140ms var(--ease), box-shadow 140ms var(--ease);
+}
+.swatch[aria-pressed="true"] {
+  transform: scale(1.14);
+  box-shadow: inset 0 0 0 2px rgba(20, 20, 20, 0.18), 0 0 0 5px var(--ink);
+}
+
+/* --- Pennelli ------------------------------------------------------------- */
+.tools { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--s1); flex: 0 0 auto; }
+.tool {
+  height: 76px;
+  background: var(--paper);
+  border: 2px solid var(--shell-deep);
+  display: grid;
+  place-items: center;
+}
+.tool[aria-pressed="true"] { border-color: var(--ink); background: var(--cadmium); }
+.tool img { width: 34px; height: 34px; }
+
+/* --- Vassoio elementi ----------------------------------------------------- */
+.tray {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 104px;
+  gap: var(--s1);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 6px;
+}
+.panel--tools { position: absolute; }
+.tray-wrap {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.tray-wrap::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 6px; bottom: 0;
+  height: 56px;
+  background: linear-gradient(to top, var(--shell), rgba(228, 222, 208, 0));
+  pointer-events: none;
+}
+.tray::-webkit-scrollbar { width: 10px; }
+.tray::-webkit-scrollbar-thumb { background: var(--shell-deep); }
+/* Intestazione di sezione: occupa tutta la riga della griglia e resta
+   visibile mentre si scorre, così si sa sempre in quale opera si è. */
+.tray__section {
+  grid-column: 1 / -1;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: var(--s1) 0 4px;
+  background: var(--shell);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.tray__section:first-child { padding-top: 0; }
+
+.tray__item {
+  height: 104px;
+  background: var(--paper);
+  border: 2px solid transparent;
+  display: grid;
+  place-items: center;
+  touch-action: none;
+}
+.tray__item img { max-width: 78%; max-height: 78%; pointer-events: none; }
+.tray__item:active { border-color: var(--ink); }
+
+/* Fantasma trascinato col dito, segue il pointer fuori dal vassoio */
+.drag-ghost {
+  position: fixed;
+  z-index: 900;
+  width: 180px;
+  height: 180px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+}
+
+/* --- Barre superiore e inferiore ------------------------------------------ */
+.topbar, .bottombar {
+  position: absolute;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--s4);
+}
+.topbar { top: 0; height: 140px; }
+
+/* Sta a destra della traccia, non sopra: la traccia arriva a 1824 e questo
+   pulsante occupa lo spazio rimasto fino al bordo. Se qualcuno allarga
+   l'artboard, va spostato o rimpicciolito. */
+.btn-info {
+  position: absolute;
+  right: 24px;
+  top: 68px;
+  width: 56px;
+  height: 56px;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-round);
+  background: var(--paper);
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ink);
+}
+.btn-info:active { background: var(--cadmium); }
+
+/* --- Finestra di spiegazione ---------------------------------------------- */
+.modal {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(20, 20, 20, 0.55);
+  z-index: 800;
+}
+.modal__card {
+  width: 760px;
+  max-height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s4);
+  background: var(--shell);
+  border: 4px solid var(--ink);
+  text-align: center;
+}
+.modal__card h2 {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 800;
+}
+.modal__figure { width: 520px; height: 200px; }
+.modal__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  font-size: 24px;
+  line-height: 1.35;
+}
+.modal__list li::before {
+  content: "";
+  display: inline-block;
+  width: 12px; height: 12px;
+  margin-right: 12px;
+  border-radius: var(--radius-round);
+  background: var(--vermilion);
+  vertical-align: middle;
+}
+.modal__tip {
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* Tre colonne: la prima larga quanto la colonna strumenti, così i comandi
+   restano centrati sotto la tela e non sotto tutto lo schermo. */
+.bottombar {
+  bottom: 0;
+  height: 140px;
+  display: grid;
+  grid-template-columns: 344px 1fr auto;
+  align-items: center;
+  gap: var(--s3);
+}
+.bottombar__tools { display: flex; gap: var(--s2); justify-content: center; }
+.btn--finish { min-height: 96px; font-size: 26px; padding: 0 var(--s4); }
+
+/* Il blocco di marca occupa la fascia a sinistra della traccia, che va da
+   0 a 404 px. Restando dentro quel limite non tocca mai la linea temporale. */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  /* Alzato rispetto al centro della barra per far spazio al logo sotto,
+     mantenendo l'insieme otticamente centrato sui 140 px. */
+  margin-top: -10px;
+}
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+.wordmark span { color: var(--vermilion); }
+
+.brand__studio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Il marchio del produttore non deve competere con il titolo
+     dell'esperienza: resta un terzo dell'altezza e in tono smorzato. */
+  opacity: 0.62;
+}
+/* Il marchio dello studio sta a metà dell'altezza del titolo: la gerarchia
+   fra il nome dell'esperienza e quello del produttore deve leggersi a colpo
+   d'occhio, da tre metri e senza sforzo. */
+.brand__studio img { width: 20px; height: 20px; display: block; }
+.brand__studio span {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.btn {
+  min-height: var(--touch);
+  padding: 0 var(--s4);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 3px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  transition: transform 120ms var(--ease);
+}
+.btn:active { transform: translateY(3px); }
+.btn:disabled { opacity: 0.32; }
+.btn--primary { background: var(--cadmium); }
+.btn--danger { background: var(--paper); color: var(--vermilion); border-color: var(--vermilion); }
+.btn--xl { min-height: 104px; font-size: 32px; padding: 0 var(--s4); }
+
+/* --- Card didattica ------------------------------------------------------- */
+.didactic {
+  position: absolute;
+  right: 48px;
+  bottom: 168px;
+  width: 460px;
+  padding: var(--s3);
+  background: var(--paper);
+  border-left: 12px solid var(--cobalt);
+  box-shadow: 14px 14px 0 rgba(20, 20, 20, 0.12);
+  animation: slide-in 320ms var(--ease);
+}
+.didactic h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: var(--s1);
+}
+.didactic p { font-size: var(--step-body); line-height: 1.45; }
+.didactic--out { animation: slide-out 260ms var(--ease) forwards; }
+
+@keyframes slide-in { from { opacity: 0; transform: translateX(40px); } }
+@keyframes slide-out { to { opacity: 0; transform: translateX(40px); } }
+
+/* --- Schermate a pieno campo ---------------------------------------------- */
+/* Il contenuto deve stare dentro 1080 px di altezza SEMPRE: qui non si può
+   scorrere, e ciò che esce dallo schermo di un chiosco è semplicemente perduto.
+   Da qui flex + justify-content: center invece di place-content: la colonna
+   si comprime invece di traboccare. */
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s3);
+  padding: var(--s3) var(--s4);
+  text-align: center;
+  background: var(--shell);
+  overflow: hidden;
+  z-index: 500;
+}
+.screen > * { flex: 0 0 auto; }
+.screen h1 {
+  font-family: var(--font-display);
+  font-size: var(--step-hero);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  max-width: 16ch;
+}
+.screen h2 { font-family: var(--font-display); font-size: var(--step-title); font-weight: 700; }
+.screen__consent {
+  display: flex;
+  gap: var(--s2);
+  align-items: center;
+  font-size: 19px;
+  max-width: 62ch;
+  text-align: left;
+}
+.screen__consent input { width: 40px; height: 40px; flex: 0 0 auto; }
+.screen__actions { display: flex; gap: var(--s3); }
+.screen p { font-size: var(--step-lead); color: var(--muted); max-width: 40ch; line-height: 1.4; }
+
+/* Firma visiva: le forme di Kandinsky vivono DENTRO il titolo della welcome,
+   non come decorazione attorno. Il logotipo è un quadro in miniatura. */
+.hero-mark { position: relative; width: 520px; height: 300px; }
+.hero-mark__shape { position: absolute; will-change: transform; }
+
+.field {
+  width: 720px;
+  height: 88px;
+  font-family: var(--font-display);
+  font-size: 36px;
+  text-align: center;
+  border: 3px solid var(--ink);
+  background: var(--paper);
+}
+
+/* Tastiera virtuale: layout fisso, tasti da 96px, niente autocorrezione */
+.keyboard { display: grid; gap: var(--s1); justify-items: center; }
+.keyboard__row { display: flex; gap: var(--s1); }
+.key {
+  width: 74px;
+  height: 74px;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  background: var(--paper);
+  border: 2px solid var(--shell-deep);
+}
+.key--wide { width: 180px; }
+.key:active { background: var(--cadmium); }
+
+.idle-warning {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: var(--s3);
+  background: rgba(228, 222, 208, 0.94);
+  z-index: 700;
+  text-align: center;
+}
+
+/* --- Testina di lettura ---------------------------------------------------- */
+/* Allineata all'artboard, non allo schermo: la corrispondenza verticale con
+   le forme sottostanti è l'unica cosa che rende leggibile il meccanismo. */
+.playhead {
+  position: absolute;
+  top: 82px;
+  height: 26px;
+  pointer-events: none;
+}
+.playhead::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 12px;
+  height: 2px;
+  background: var(--playhead-tint, var(--shell-deep));
+  transition: background 1.6s var(--ease);
+}
+.playhead__beats span {
+  position: absolute;
+  top: 6px;
+  width: 2px;
+  height: 14px;
+  background: var(--shell-deep);
+}
+.playhead__marks span {
+  position: absolute;
+  top: 7px;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  border-radius: var(--radius-round);
+  box-shadow: 0 0 0 2px var(--shell);
+}
+.playhead__spark {
+  animation: spark 600ms var(--ease) forwards;
+}
+@keyframes spark {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3.2); opacity: 0; }
+}
+.playhead__cursor {
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 26px;
+  margin-left: -1.5px;
+  background: var(--vermilion);
+  will-change: transform;
+}
+.playhead__cursor::after {
+  content: "";
+  position: absolute;
+  top: -7px; left: -5px;
+  width: 13px; height: 13px;
+  background: var(--vermilion);
+  border-radius: var(--radius-round);
+}
+
+/* --- Puntatore mouse (solo sviluppo) --------------------------------------- */
+/* Diametro pari a quello del pennello: si vede in anticipo quanto sarà largo
+   il tratto, che con `cursor: none` è informazione altrimenti invisibile. */
+.pointer-halo {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 9999;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-round);
+  background: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 140ms var(--ease), background 100ms var(--ease);
+  will-change: transform, width, height;
+}
+.pointer-halo--on { opacity: 0.95; }
+.pointer-halo--down { background: rgba(20, 20, 20, 0.22); }
+.pointer-halo::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 4px; height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: var(--radius-round);
+  background: currentColor;
+  color: var(--ink);
+}
+
+/* L'anteprima si adatta allo spazio rimasto invece di imporre la propria
+   altezza: è ciò che impediva ai pulsanti di stare nello schermo. */
+.review-image {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-width: 1180px;
+  max-height: 640px;
+  object-fit: contain;
+  border: 6px solid var(--ink);
+  background: var(--paper);
+}

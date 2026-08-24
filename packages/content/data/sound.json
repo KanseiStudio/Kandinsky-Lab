@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "enabled": true,
+  "key": "D",
+  "scale": "major_pentatonic",
+  "bpm": 72,
+  "loopBars": 4,
+  "maxVoices": 7,
+  "masterGain": -9,
+  "fadeOutAfterSec": 45,
+  "paint": {
+    "enabled": true,
+    "shortStrokeMs": 320,
+    "velocityReference": 1400,
+    "maxNotesPerSecond": 6,
+    "legatoGlide": true
+  },
+  "progression": {
+    "enabled": true,
+    "barsPerChord": 4,
+    "chords": [
+      {
+        "root": 0,
+        "label": "tonica — riposo"
+      },
+      {
+        "root": 3,
+        "label": "apertura"
+      },
+      {
+        "root": 4,
+        "label": "tensione"
+      },
+      {
+        "root": 1,
+        "label": "ritorno"
+      }
+    ],
+    "bass": {
+      "enabled": true,
+      "timbre": "sub",
+      "octave": 2,
+      "gain": -10
+    }
+  },
+  "finale": {
+    "retreatSec": 3,
+    "resolveSec": 6,
+    "tailSec": 5
+  }
+}

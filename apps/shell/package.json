@@ -1,0 +1,21 @@
+{
+  "name": "@kandinsky/shell",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder --win --x64"
+  },
+  "devDependencies": {
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "it.kanseistudio.kandinskylab",
+    "productName": "Kandinsky Lab",
+    "files": ["main.cjs", "preload.cjs", "dist/**"],
+    "extraResources": [{ "from": "../../packages/content", "to": "content" }],
+    "win": { "target": "nsis" }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "brushes": [
+    { "id": "brush", "label": { "it": "Pennello", "en": "Brush" }, "size": 18, "opacity": 1, "softness": 0.15, "jitter": 0.05, "icon": "ui/brush.svg", "enabled": true },
+    { "id": "wide", "label": { "it": "Pennellone", "en": "Wide brush" }, "size": 54, "opacity": 0.95, "softness": 0.25, "jitter": 0.08, "icon": "ui/brush-wide.svg", "enabled": true },
+    { "id": "fine", "label": { "it": "Pennellino", "en": "Fine brush" }, "size": 7, "opacity": 1, "softness": 0.05, "jitter": 0, "icon": "ui/brush-fine.svg", "enabled": true },
+    { "id": "pencil", "label": { "it": "Matita", "en": "Pencil" }, "size": 4, "opacity": 0.8, "softness": 0, "jitter": 0.15, "icon": "ui/pencil.svg", "enabled": true },
+    { "id": "eraser", "label": { "it": "Gomma", "en": "Eraser" }, "size": 44, "opacity": 1, "softness": 0.1, "jitter": 0, "icon": "ui/eraser.svg", "enabled": true }
+  ]
+}

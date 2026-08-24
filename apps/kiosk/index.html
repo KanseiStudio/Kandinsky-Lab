@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kandinsky Lab</title>
+    <meta name="viewport" content="width=1920, initial-scale=1, user-scalable=no" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <!-- Il tavolo è 1920x1080 fissi: il layout è ancorato, non responsive.
+         Tutto vive dentro #frame, scalato via transform se il pannello differisce. -->
+    <div id="frame">
+      <div id="stage-host"></div>
+      <div id="ui-root"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "defaultPaletteId": "giallo_rosso_blu",
+  "palettes": [
+    {
+      "id": "giallo_rosso_blu",
+      "label": { "it": "Giallo Rosso Blu", "en": "Yellow Red Blue" },
+      "source": "Gelb-Rot-Blau, 1925 — Centre Pompidou",
+      "canvasBackground": "#F2EEDF",
+      "darkCanvas": false,
+      "swatches": [
+        { "id": "giallo_cadmio", "hex": "#EFC93B", "label": { "it": "giallo", "en": "yellow" },
+          "sound": { "timbre": "brass", "octave": 5, "gain": -4, "space": 0.2, "note": "Kandinsky descrive il giallo come uno squillo di tromba: brillante, alto, poco riverbero." } },
+        { "id": "rosso_vermiglio", "hex": "#C5202E", "label": { "it": "rosso", "en": "red" },
+          "sound": { "timbre": "reed", "octave": 4, "gain": -2, "space": 0.25, "note": "Rosso: caldo, corposo, presente. Registro centrale." } },
+        { "id": "blu_cobalto", "hex": "#1E3E8F", "label": { "it": "blu", "en": "blue" },
+          "sound": { "timbre": "bow", "octave": 3, "gain": 0, "space": 0.55, "note": "Il blu profondo come un violoncello: attacco lento, spazio ampio." } },
+        { "id": "nero", "hex": "#1A1A1A", "label": { "it": "nero", "en": "black" },
+          "sound": { "timbre": "mallet", "octave": 2, "gain": -3, "space": 0.1, "note": "Il nero come silenzio percosso: colpo secco, coda cortissima." } },
+        { "id": "viola_bruma", "hex": "#8B7BB0", "label": { "it": "viola", "en": "violet" },
+          "sound": { "timbre": "bell", "octave": 5, "gain": -6, "space": 0.7, "note": "Viola: metallico, sospeso, coda lunga." } },
+        { "id": "grigio_pietra", "hex": "#8C8C8C", "label": { "it": "grigio", "en": "grey" },
+          "sound": { "timbre": "noise", "octave": 4, "gain": -10, "space": 0.6, "note": "Grigio: nessuna altezza definita, solo respiro." } },
+        { "id": "rosa_cipria", "hex": "#E39BAE", "label": { "it": "rosa", "en": "pink" },
+          "sound": { "timbre": "pluck", "octave": 5, "gain": -5, "space": 0.4 } },
+        { "id": "avorio", "hex": "#EFEAD3", "label": { "it": "avorio", "en": "ivory" },
+          "sound": { "timbre": "pad", "octave": 5, "gain": -12, "space": 0.8, "note": "Chiarissimo: quasi solo aria. Sulla tela chiara funziona anche da correttore." } }
+      ],
+      "enabled": true
+    },
+    {
+      "id": "macchia_rossa",
+      "label": { "it": "Macchia rossa", "en": "Red Spot" },
+      "source": "Roter Fleck II, 1921 — Städtische Galerie im Lenbachhaus",
+      "canvasBackground": "#F4F2ED",
+      "darkCanvas": false,
+      "swatches": [
+        { "id": "rosso_macchia", "hex": "#C9352E", "label": { "it": "rosso", "en": "red" }, "sound": { "timbre": "reed", "octave": 4, "gain": -2, "space": 0.3 } },
+        { "id": "giallo_ocra", "hex": "#E8B62C", "label": { "it": "giallo", "en": "yellow" }, "sound": { "timbre": "brass", "octave": 5, "gain": -5, "space": 0.2 } },
+        { "id": "blu_oltremare", "hex": "#2B58A8", "label": { "it": "blu", "en": "blue" }, "sound": { "timbre": "bow", "octave": 3, "gain": -1, "space": 0.5 } },
+        { "id": "verde_smeraldo", "hex": "#2E8B6B", "label": { "it": "verde", "en": "green" }, "sound": { "timbre": "pad", "octave": 4, "gain": -6, "space": 0.6, "note": "Verde: immobile, senza tensione. Nota tenuta che non si muove." } },
+        { "id": "inchiostro", "hex": "#141414", "label": { "it": "nero", "en": "black" }, "sound": { "timbre": "mallet", "octave": 2, "gain": -3, "space": 0.1 } },
+        { "id": "rosa_carne", "hex": "#E9A0A8", "label": { "it": "rosa", "en": "pink" }, "sound": { "timbre": "pluck", "octave": 5, "gain": -5, "space": 0.45 } },
+        { "id": "viola_ametista", "hex": "#6E5A9C", "label": { "it": "viola", "en": "violet" }, "sound": { "timbre": "bell", "octave": 4, "gain": -6, "space": 0.7 } },
+        { "id": "bianco_gesso", "hex": "#F4F2ED", "label": { "it": "bianco", "en": "white" }, "sound": { "timbre": "pad", "octave": 6, "gain": -13, "space": 0.85 } }
+      ],
+      "enabled": true
+    },
+    {
+      "id": "mosca",
+      "label": { "it": "Mosca", "en": "Moscow" },
+      "source": "Mosca I (Piazza Rossa), 1916 — Galleria Tret'jakov",
+      "canvasBackground": "#EDE6D4",
+      "darkCanvas": false,
+      "swatches": [
+        { "id": "arancio_fuoco", "hex": "#E4471F", "label": { "it": "arancio", "en": "orange" }, "sound": { "timbre": "brass", "octave": 4, "gain": -3, "space": 0.25 } },
+        { "id": "blu_notte", "hex": "#2B3A8C", "label": { "it": "blu notte", "en": "night blue" }, "sound": { "timbre": "sub", "octave": 2, "gain": -2, "space": 0.5 } },
+        { "id": "verde_cupola", "hex": "#3D7A5E", "label": { "it": "verde", "en": "green" }, "sound": { "timbre": "pad", "octave": 4, "gain": -6, "space": 0.55 } },
+        { "id": "oro", "hex": "#F0C33C", "label": { "it": "oro", "en": "gold" }, "sound": { "timbre": "bell", "octave": 5, "gain": -5, "space": 0.6 } },
+        { "id": "rosa_antico", "hex": "#E58B8B", "label": { "it": "rosa", "en": "pink" }, "sound": { "timbre": "pluck", "octave": 5, "gain": -5, "space": 0.4 } },
+        { "id": "bianco_neve", "hex": "#F2EFE6", "label": { "it": "bianco", "en": "white" }, "sound": { "timbre": "pad", "octave": 6, "gain": -12, "space": 0.8 } },
+        { "id": "indaco", "hex": "#1B2450", "label": { "it": "indaco", "en": "indigo" }, "sound": { "timbre": "bow", "octave": 2, "gain": -1, "space": 0.6 } }
+      ],
+      "enabled": false
+    },
+    {
+      "id": "composizione_x",
+      "label": { "it": "Notte", "en": "Night" },
+      "source": "Composition X, 1939 — Kunstsammlung Nordrhein-Westfalen",
+      "canvasBackground": "#0E0E10",
+      "darkCanvas": true,
+      "swatches": [
+        { "id": "terra_bruciata", "hex": "#9E4B22", "label": { "it": "terra", "en": "earth" }, "sound": { "timbre": "reed", "octave": 3, "gain": -3, "space": 0.4 } },
+        { "id": "menta", "hex": "#7FC3B0", "label": { "it": "verde menta", "en": "mint" }, "sound": { "timbre": "pad", "octave": 5, "gain": -7, "space": 0.7 } },
+        { "id": "magenta", "hex": "#D4356E", "label": { "it": "magenta", "en": "magenta" }, "sound": { "timbre": "pluck", "octave": 5, "gain": -4, "space": 0.35 } },
+        { "id": "viola_profondo", "hex": "#7A5AA8", "label": { "it": "viola", "en": "violet" }, "sound": { "timbre": "bell", "octave": 4, "gain": -5, "space": 0.75 } },
+        { "id": "crema", "hex": "#F2E7C9", "label": { "it": "crema", "en": "cream" }, "sound": { "timbre": "mallet", "octave": 5, "gain": -6, "space": 0.3 } },
+        { "id": "verde_prato", "hex": "#3E8E5A", "label": { "it": "verde", "en": "green" }, "sound": { "timbre": "pad", "octave": 4, "gain": -6, "space": 0.6 } },
+        { "id": "arancio_caldo", "hex": "#E8942E", "label": { "it": "arancio", "en": "orange" }, "sound": { "timbre": "brass", "octave": 4, "gain": -4, "space": 0.3 } },
+        { "id": "azzurro_luna", "hex": "#8FB8D8", "label": { "it": "azzurro", "en": "pale blue" }, "sound": { "timbre": "bow", "octave": 4, "gain": -6, "space": 0.65 } }
+      ],
+      "enabled": false
+    }
+  ]
+}

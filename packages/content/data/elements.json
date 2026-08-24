@@ -1,0 +1,2999 @@
+{
+  "version": 3,
+  "updatedAt": "2026-08-24",
+  "elements": [
+    {
+      "id": "intersecting_lines__01_01_pianeta_blu",
+      "category": "circle",
+      "label": {
+        "it": "Cerchio blu con linee diagonali",
+        "en": "Cerchio blu con linee diagonali"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__01_01_pianeta_blu.png",
+        "width": 640,
+        "height": 580,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala."
+      },
+      "didactics": {
+        "short": {
+          "it": "Cerchio blu con linee diagonali",
+          "en": "Cerchio blu con linee diagonali"
+        },
+        "extended": {
+          "it": "Per Kandinsky il blu tende alla profondità e al raccoglimento; la forma circolare accentua una tensione concentrica. Il frammento non è documentato come “pianeta”."
+        },
+        "cardId": "card_intersecting_lines__01_01_pianeta_blu"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 1000,
+      "tags": [
+        "intersecting_lines",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "intersecting_lines__02_02_griglia_rombo",
+      "category": "grid",
+      "label": {
+        "it": "Reticolo di linee diagonali",
+        "en": "Reticolo di linee diagonali"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__02_02_griglia_rombo.png",
+        "width": 640,
+        "height": 417,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Reticolo di linee diagonali",
+          "en": "Reticolo di linee diagonali"
+        },
+        "extended": {
+          "it": "La linea, nella teoria di Kandinsky, unisce tensione e direzione. L'incrocio di più diagonali produce quindi un campo di forze visive; non è documentato un significato oggettuale specifico."
+        },
+        "cardId": "card_intersecting_lines__02_02_griglia_rombo"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "16n",
+        "every": 1,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 999,
+      "tags": [
+        "intersecting_lines",
+        "t"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "intersecting_lines__03_03_triangolo_rosso",
+      "category": "triangle",
+      "label": {
+        "it": "Triangolo rosso",
+        "en": "Triangolo rosso"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__03_03_triangolo_rosso.png",
+        "width": 640,
+        "height": 443,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala."
+      },
+      "didactics": {
+        "short": {
+          "it": "Triangolo rosso",
+          "en": "Triangolo rosso"
+        },
+        "extended": {
+          "it": "Il triangolo è una delle forme piane fondamentali di Kandinsky e si pone in forte contrasto con il cerchio. Il rosso è descritto come un colore di energia intensa che agisce soprattutto “dall'interno”."
+        },
+        "cardId": "card_intersecting_lines__03_03_triangolo_rosso"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "accent",
+        "length": "16n",
+        "every": 1,
+        "gain": -3,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 998,
+      "tags": [
+        "intersecting_lines",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "intersecting_lines__04_04_zigzag_nero",
+      "category": "sign",
+      "label": {
+        "it": "Linea angolare nera",
+        "en": "Linea angolare nera"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__04_04_zigzag_nero.png",
+        "width": 415,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Linea angolare nera",
+          "en": "Linea angolare nera"
+        },
+        "extended": {
+          "it": "Una linea angolare nasce da cambi di direzione e concentra tensioni diverse. Il nero, nella teoria cromatica di Kandinsky, è associato a immobilità e silenzio profondo."
+        },
+        "cardId": "card_intersecting_lines__04_04_zigzag_nero"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "accent",
+        "length": "16n",
+        "every": 1,
+        "gain": -3,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 997,
+      "tags": [
+        "intersecting_lines",
+        "t"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "intersecting_lines__05_05_anello_centrale",
+      "category": "circle",
+      "label": {
+        "it": "Anello / forma circolare concentrica",
+        "en": "Anello / forma circolare concentrica"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__05_05_anello_centrale.png",
+        "width": 640,
+        "height": 564,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala."
+      },
+      "didactics": {
+        "short": {
+          "it": "Anello / forma circolare concentrica",
+          "en": "Anello / forma circolare concentrica"
+        },
+        "extended": {
+          "it": "Kandinsky descrive il cerchio come il risultato della tendenza di una curva a chiudersi. La forma porta quindi una tensione raccolta e autocontenuta; nessun significato iconografico specifico è documentato."
+        },
+        "cardId": "card_intersecting_lines__05_05_anello_centrale"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 996,
+      "tags": [
+        "intersecting_lines",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "intersecting_lines__06_06_cerchio_arancio",
+      "category": "circle",
+      "label": {
+        "it": "Cerchio arancione",
+        "en": "Cerchio arancione"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__06_06_cerchio_arancio.png",
+        "width": 593,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala."
+      },
+      "didactics": {
+        "short": {
+          "it": "Cerchio arancione",
+          "en": "Cerchio arancione"
+        },
+        "extended": {
+          "it": "L'arancione è descritto da Kandinsky come un rosso reso più attivo dal giallo, quindi più spinto verso l'esterno. La forma circolare introduce invece una struttura chiusa e concentrica."
+        },
+        "cardId": "card_intersecting_lines__06_06_cerchio_arancio"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 995,
+      "tags": [
+        "intersecting_lines",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "intersecting_lines__07_07_pannello_sinistro",
+      "category": "square",
+      "label": {
+        "it": "Aggregato di piani, linee e colori",
+        "en": "Aggregato di piani, linee e colori"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__07_07_pannello_sinistro.png",
+        "width": 582,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala."
+      },
+      "didactics": {
+        "short": {
+          "it": "Aggregato di piani, linee e colori",
+          "en": "Aggregato di piani, linee e colori"
+        },
+        "extended": {
+          "it": "Il frammento va letto come rapporto tra linee, piani e colori, gli elementi fondamentali dell'analisi di Kandinsky. Non esiste una fonte consultata che lo identifichi come un oggetto preciso."
+        },
+        "cardId": "card_intersecting_lines__07_07_pannello_sinistro"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "chord",
+        "length": "1n",
+        "every": 4,
+        "gain": -6,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 994,
+      "tags": [
+        "intersecting_lines",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "intersecting_lines__08_08_ovale_dest",
+      "category": "organic",
+      "label": {
+        "it": "Sistema di curve e piani sul lato destro",
+        "en": "Sistema di curve e piani sul lato destro"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__08_08_ovale_dest.png",
+        "width": 603,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala."
+      },
+      "didactics": {
+        "short": {
+          "it": "Sistema di curve e piani sul lato destro",
+          "en": "Sistema di curve e piani sul lato destro"
+        },
+        "extended": {
+          "it": "Per Kandinsky la curva nasce dall'azione continua di forze e contiene una tendenza alla chiusura, fino alla formazione del piano circolare. Il frammento non ha un significato figurativo specifico documentato."
+        },
+        "cardId": "card_intersecting_lines__08_08_ovale_dest"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "texture",
+        "length": "2m",
+        "every": 4,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 993,
+      "tags": [
+        "intersecting_lines",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "intersecting_lines__09_09_loop_inferiore",
+      "category": "arc",
+      "label": {
+        "it": "Linea curva ad anello",
+        "en": "Linea curva ad anello"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__09_09_loop_inferiore.png",
+        "width": 640,
+        "height": 387,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala."
+      },
+      "didactics": {
+        "short": {
+          "it": "Linea curva ad anello",
+          "en": "Linea curva ad anello"
+        },
+        "extended": {
+          "it": "La linea curva è per Kandinsky una forma elastica, prodotta da pressioni continue, e tende a chiudersi in un piano. Qui il valore è formale e dinamico, non narrativo."
+        },
+        "cardId": "card_intersecting_lines__09_09_loop_inferiore"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sweep",
+        "length": "8n",
+        "every": 4,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 992,
+      "tags": [
+        "intersecting_lines",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "intersecting_lines__10_10_ovale_arancio",
+      "category": "organic",
+      "label": {
+        "it": "Forma ovale arancione",
+        "en": "Forma ovale arancione"
+      },
+      "asset": {
+        "file": "elements/intersecting_lines__10_10_ovale_arancio.png",
+        "width": 640,
+        "height": 579,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Intersecting Lines (Sich kreuzende Linien)",
+        "year": 1923,
+        "rights": "to-verify",
+        "rightsNote": "Titolo identificato tramite riferimento [8]. Verificare i diritti sulla riproduzione fotografica prima della messa in sala."
+      },
+      "didactics": {
+        "short": {
+          "it": "Forma ovale arancione",
+          "en": "Forma ovale arancione"
+        },
+        "extended": {
+          "it": "Il colore arancione unisce la spinta del giallo all'energia interna del rosso; la curva ovale aggiunge una tensione di chiusura. Nessun oggetto specifico è documentato."
+        },
+        "cardId": "card_intersecting_lines__10_10_ovale_arancio"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "texture",
+        "length": "2m",
+        "every": 4,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 991,
+      "tags": [
+        "intersecting_lines",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "gelb_rot_blau__01_01_cluster_sinistro",
+      "category": "fragment",
+      "label": {
+        "it": "Aggregato geometrico sinistro",
+        "en": "Aggregato geometrico sinistro"
+      },
+      "asset": {
+        "file": "elements/gelb_rot_blau__01_01_cluster_sinistro.png",
+        "width": 640,
+        "height": 506,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Gelb-Rot-Blau (Jaune-rouge-bleu)",
+        "year": 1925,
+        "holder": "Centre Pompidou",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Centre Pompidou [5]. Verificare i diritti sulla riproduzione fotografica. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Aggregato geometrico sinistro",
+          "en": "Aggregato geometrico sinistro"
+        },
+        "extended": {
+          "it": "Fa parte della zona sinistra dell'opera, che il Centre Pompidou descrive come più geometrica e luminosa rispetto alla parte destra. Il suo valore è quindi soprattutto compositivo e di contrasto."
+        },
+        "cardId": "card_gelb_rot_blau__01_01_cluster_sinistro"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "chord",
+        "length": "1n",
+        "every": 4,
+        "gain": -6,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 979,
+      "tags": [
+        "gelb_rot_blau",
+        "o"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "gelb_rot_blau__02_02_anello_grigio",
+      "category": "circle",
+      "label": {
+        "it": "Anello grigio",
+        "en": "Anello grigio"
+      },
+      "asset": {
+        "file": "elements/gelb_rot_blau__02_02_anello_grigio.png",
+        "width": 640,
+        "height": 567,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Gelb-Rot-Blau (Jaune-rouge-bleu)",
+        "year": 1925,
+        "holder": "Centre Pompidou",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Centre Pompidou [5]. Verificare i diritti sulla riproduzione fotografica. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Anello grigio",
+          "en": "Anello grigio"
+        },
+        "extended": {
+          "it": "Kandinsky descrive il grigio come immobile e privo di movimento attivo. La forma circolare aggiunge una struttura chiusa e concentrica."
+        },
+        "cardId": "card_gelb_rot_blau__02_02_anello_grigio"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 978,
+      "tags": [
+        "gelb_rot_blau",
+        "t"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "gelb_rot_blau__03_03_cerchio_nero_rosso",
+      "category": "circle",
+      "label": {
+        "it": "Cerchio nero con centro rosso",
+        "en": "Cerchio nero con centro rosso"
+      },
+      "asset": {
+        "file": "elements/gelb_rot_blau__03_03_cerchio_nero_rosso.png",
+        "width": 583,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Gelb-Rot-Blau (Jaune-rouge-bleu)",
+        "year": 1925,
+        "holder": "Centre Pompidou",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Centre Pompidou [5]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Cerchio nero con centro rosso",
+          "en": "Cerchio nero con centro rosso"
+        },
+        "extended": {
+          "it": "Il rosso possiede per Kandinsky un'energia interna intensa; il nero introduce un forte silenzio e contrasto. La struttura circolare mantiene l'insieme concentrato."
+        },
+        "cardId": "card_gelb_rot_blau__03_03_cerchio_nero_rosso"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 977,
+      "tags": [
+        "gelb_rot_blau",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "gelb_rot_blau__04_04_cluster_centrale",
+      "category": "fragment",
+      "label": {
+        "it": "Aggregato centrale di piani",
+        "en": "Aggregato centrale di piani"
+      },
+      "asset": {
+        "file": "elements/gelb_rot_blau__04_04_cluster_centrale.png",
+        "width": 560,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Gelb-Rot-Blau (Jaune-rouge-bleu)",
+        "year": 1925,
+        "holder": "Centre Pompidou",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Centre Pompidou [5]. Verificare i diritti sulla riproduzione fotografica. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Aggregato centrale di piani",
+          "en": "Aggregato centrale di piani"
+        },
+        "extended": {
+          "it": "Questo gruppo partecipa all'equilibrio tra elementi opposti che il Centre Pompidou riconosce come principio della composizione. Non è documentato come oggetto figurativo."
+        },
+        "cardId": "card_gelb_rot_blau__04_04_cluster_centrale"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "chord",
+        "length": "1n",
+        "every": 4,
+        "gain": -6,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 976,
+      "tags": [
+        "gelb_rot_blau",
+        "o/nd"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "gelb_rot_blau__05_05_vortice_dest",
+      "category": "fragment",
+      "label": {
+        "it": "Sistema curvilineo della zona destra",
+        "en": "Sistema curvilineo della zona destra"
+      },
+      "asset": {
+        "file": "elements/gelb_rot_blau__05_05_vortice_dest.png",
+        "width": 533,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Gelb-Rot-Blau (Jaune-rouge-bleu)",
+        "year": 1925,
+        "holder": "Centre Pompidou",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Centre Pompidou [5]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Sistema curvilineo della zona destra",
+          "en": "Sistema curvilineo della zona destra"
+        },
+        "extended": {
+          "it": "Appartiene alla parte destra, descritta dal Centre Pompidou come più complessa, curvilinea e scura rispetto alla sinistra. “Vortice” è soltanto un nome tecnico del file, non una denominazione di Kandinsky."
+        },
+        "cardId": "card_gelb_rot_blau__05_05_vortice_dest"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sweep",
+        "length": "8n",
+        "every": 4,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 975,
+      "tags": [
+        "gelb_rot_blau",
+        "o"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "gelb_rot_blau__06_06_linee_inferiori",
+      "category": "line",
+      "label": {
+        "it": "Reticolo di linee inferiori",
+        "en": "Reticolo di linee inferiori"
+      },
+      "asset": {
+        "file": "elements/gelb_rot_blau__06_06_linee_inferiori.png",
+        "width": 640,
+        "height": 507,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Gelb-Rot-Blau (Jaune-rouge-bleu)",
+        "year": 1925,
+        "holder": "Centre Pompidou",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Centre Pompidou [5]. Verificare i diritti sulla riproduzione fotografica. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Reticolo di linee inferiori",
+          "en": "Reticolo di linee inferiori"
+        },
+        "extended": {
+          "it": "Per Kandinsky la linea è definita da tensione e direzione. L'incrocio di rette e diagonali crea quindi una rete di forze visive all'interno della composizione."
+        },
+        "cardId": "card_gelb_rot_blau__06_06_linee_inferiori"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "8n",
+        "every": 1,
+        "gain": -6,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 974,
+      "tags": [
+        "gelb_rot_blau",
+        "t"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "gelb_rot_blau__07_07_griglia_dest",
+      "category": "grid",
+      "label": {
+        "it": "Griglia di linee e piani a destra",
+        "en": "Griglia di linee e piani a destra"
+      },
+      "asset": {
+        "file": "elements/gelb_rot_blau__07_07_griglia_dest.png",
+        "width": 640,
+        "height": 614,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Gelb-Rot-Blau (Jaune-rouge-bleu)",
+        "year": 1925,
+        "holder": "Centre Pompidou",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Centre Pompidou [5]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Griglia di linee e piani a destra",
+          "en": "Griglia di linee e piani a destra"
+        },
+        "extended": {
+          "it": "La combinazione di rette, incroci e piccoli piani intensifica la complessità della zona destra dell'opera, in accordo con la lettura curatoriale del Centre Pompidou."
+        },
+        "cardId": "card_gelb_rot_blau__07_07_griglia_dest"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "16n",
+        "every": 1,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 973,
+      "tags": [
+        "gelb_rot_blau",
+        "o/t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "gelb_rot_blau__08_08_cerchio_grigio_basso",
+      "category": "circle",
+      "label": {
+        "it": "Cerchio grigio inferiore",
+        "en": "Cerchio grigio inferiore"
+      },
+      "asset": {
+        "file": "elements/gelb_rot_blau__08_08_cerchio_grigio_basso.png",
+        "width": 640,
+        "height": 572,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Gelb-Rot-Blau (Jaune-rouge-bleu)",
+        "year": 1925,
+        "holder": "Centre Pompidou",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Centre Pompidou [5]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Cerchio grigio inferiore",
+          "en": "Cerchio grigio inferiore"
+        },
+        "extended": {
+          "it": "Il grigio è definito da Kandinsky come statico e silenzioso; il cerchio è una forma concentrica. La combinazione produce quindi un elemento formalmente raccolto e poco espansivo."
+        },
+        "cardId": "card_gelb_rot_blau__08_08_cerchio_grigio_basso"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 972,
+      "tags": [
+        "gelb_rot_blau",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "gelb_rot_blau__09_09_scacchiera",
+      "category": "grid",
+      "label": {
+        "it": "Piccola griglia di piani colorati",
+        "en": "Piccola griglia di piani colorati"
+      },
+      "asset": {
+        "file": "elements/gelb_rot_blau__09_09_scacchiera.png",
+        "width": 640,
+        "height": 620,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Gelb-Rot-Blau (Jaune-rouge-bleu)",
+        "year": 1925,
+        "holder": "Centre Pompidou",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Centre Pompidou [5]. Verificare i diritti sulla riproduzione fotografica. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Piccola griglia di piani colorati",
+          "en": "Piccola griglia di piani colorati"
+        },
+        "extended": {
+          "it": "I piccoli piani colorati funzionano come contrasti cromatici interni alla composizione. Non è documentato che rappresentino una scacchiera: il termine era solo un'etichetta tecnica del ritaglio."
+        },
+        "cardId": "card_gelb_rot_blau__09_09_scacchiera"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "16n",
+        "every": 1,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 971,
+      "tags": [
+        "gelb_rot_blau",
+        "t/nd"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "delicate_tension__01_01_triangolo_arancio",
+      "category": "triangle",
+      "label": {
+        "it": "Grande piano triangolare con area arancione",
+        "en": "Grande piano triangolare con area arancione"
+      },
+      "asset": {
+        "file": "elements/delicate_tension__01_01_triangolo_arancio.png",
+        "width": 607,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Delicate Tension. No. 85",
+        "year": 1923,
+        "holder": "Museo Nacional Thyssen-Bornemisza",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Thyssen-Bornemisza [7]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Grande piano triangolare con area arancione",
+          "en": "Grande piano triangolare con area arancione"
+        },
+        "extended": {
+          "it": "Il triangolo introduce una forte tensione angolare e si contrappone al cerchio, contrasto esplicitamente ricordato dal Museo Thyssen per quest'opera. L'arancione conserva l'energia del rosso attivata dal giallo."
+        },
+        "cardId": "card_delicate_tension__01_01_triangolo_arancio"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "accent",
+        "length": "16n",
+        "every": 1,
+        "gain": -3,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 959,
+      "tags": [
+        "delicate_tension",
+        "o/t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "delicate_tension__02_02_cerchio_blu",
+      "category": "circle",
+      "label": {
+        "it": "Cerchio blu",
+        "en": "Cerchio blu"
+      },
+      "asset": {
+        "file": "elements/delicate_tension__02_02_cerchio_blu.png",
+        "width": 595,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Delicate Tension. No. 85",
+        "year": 1923,
+        "holder": "Museo Nacional Thyssen-Bornemisza",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Thyssen-Bornemisza [7]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Cerchio blu",
+          "en": "Cerchio blu"
+        },
+        "extended": {
+          "it": "Il blu tende alla profondità e al raccoglimento; il cerchio è una forma chiusa e concentrica. È una delle associazioni più coerenti con il sistema formale e cromatico di Kandinsky."
+        },
+        "cardId": "card_delicate_tension__02_02_cerchio_blu"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 958,
+      "tags": [
+        "delicate_tension",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "delicate_tension__03_03_polo_superiore",
+      "category": "sign",
+      "label": {
+        "it": "Nodo superiore con linee convergenti",
+        "en": "Nodo superiore con linee convergenti"
+      },
+      "asset": {
+        "file": "elements/delicate_tension__03_03_polo_superiore.png",
+        "width": 591,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Delicate Tension. No. 85",
+        "year": 1923,
+        "holder": "Museo Nacional Thyssen-Bornemisza",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Thyssen-Bornemisza [7]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Nodo superiore con linee convergenti",
+          "en": "Nodo superiore con linee convergenti"
+        },
+        "extended": {
+          "it": "Il punto concentra la tensione senza una direzione propria; le linee, invece, aggiungono direzione. L'incrocio delle linee attorno a un centro rende visibile questa distinzione teorica."
+        },
+        "cardId": "card_delicate_tension__03_03_polo_superiore"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "accent",
+        "length": "16n",
+        "every": 1,
+        "gain": -3,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 957,
+      "tags": [
+        "delicate_tension",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "delicate_tension__04_04_cerchio_nero_rosso",
+      "category": "circle",
+      "label": {
+        "it": "Cerchio nero con centro rosso",
+        "en": "Cerchio nero con centro rosso"
+      },
+      "asset": {
+        "file": "elements/delicate_tension__04_04_cerchio_nero_rosso.png",
+        "width": 610,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Delicate Tension. No. 85",
+        "year": 1923,
+        "holder": "Museo Nacional Thyssen-Bornemisza",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Thyssen-Bornemisza [7]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Cerchio nero con centro rosso",
+          "en": "Cerchio nero con centro rosso"
+        },
+        "extended": {
+          "it": "Il rosso esprime energia interna, mentre il nero è associato a immobilità e silenzio. La forma circolare raccoglie il contrasto in una struttura concentrica."
+        },
+        "cardId": "card_delicate_tension__04_04_cerchio_nero_rosso"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 956,
+      "tags": [
+        "delicate_tension",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "delicate_tension__05_05_scacchiera_centrale",
+      "category": "grid",
+      "label": {
+        "it": "Griglia centrale di piani geometrici",
+        "en": "Griglia centrale di piani geometrici"
+      },
+      "asset": {
+        "file": "elements/delicate_tension__05_05_scacchiera_centrale.png",
+        "width": 640,
+        "height": 577,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Delicate Tension. No. 85",
+        "year": 1923,
+        "holder": "Museo Nacional Thyssen-Bornemisza",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Thyssen-Bornemisza [7]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Griglia centrale di piani geometrici",
+          "en": "Griglia centrale di piani geometrici"
+        },
+        "extended": {
+          "it": "La composizione dell'opera è descritta dal Thyssen come fortemente geometrica. La griglia mette in relazione piani, linee e contrasti cromatici; non è documentato che rappresenti una scacchiera."
+        },
+        "cardId": "card_delicate_tension__05_05_scacchiera_centrale"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "16n",
+        "every": 1,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 955,
+      "tags": [
+        "delicate_tension",
+        "o/t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "delicate_tension__06_06_semicerchio_giallo",
+      "category": "arc",
+      "label": {
+        "it": "Piano curvo giallo",
+        "en": "Piano curvo giallo"
+      },
+      "asset": {
+        "file": "elements/delicate_tension__06_06_semicerchio_giallo.png",
+        "width": 640,
+        "height": 478,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Delicate Tension. No. 85",
+        "year": 1923,
+        "holder": "Museo Nacional Thyssen-Bornemisza",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Thyssen-Bornemisza [7]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Piano curvo giallo",
+          "en": "Piano curvo giallo"
+        },
+        "extended": {
+          "it": "Il giallo tende, secondo Kandinsky, a espandersi verso l'esterno; la curva porta invece una tendenza alla chiusura. L'elemento unisce quindi due tensioni formali differenti."
+        },
+        "cardId": "card_delicate_tension__06_06_semicerchio_giallo"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sweep",
+        "length": "8n",
+        "every": 4,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 954,
+      "tags": [
+        "delicate_tension",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "delicate_tension__07_07_linee_sinistre",
+      "category": "line",
+      "label": {
+        "it": "Rete di linee a sinistra",
+        "en": "Rete di linee a sinistra"
+      },
+      "asset": {
+        "file": "elements/delicate_tension__07_07_linee_sinistre.png",
+        "width": 478,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Delicate Tension. No. 85",
+        "year": 1923,
+        "holder": "Museo Nacional Thyssen-Bornemisza",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Thyssen-Bornemisza [7]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Rete di linee a sinistra",
+          "en": "Rete di linee a sinistra"
+        },
+        "extended": {
+          "it": "Kandinsky definisce la linea tramite due componenti: tensione e direzione. L'insieme di rette e diagonali costruisce un campo di forze visive coerente con questa teoria."
+        },
+        "cardId": "card_delicate_tension__07_07_linee_sinistre"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "8n",
+        "every": 1,
+        "gain": -6,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 953,
+      "tags": [
+        "delicate_tension",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "delicate_tension__08_08_nodi_basso_dest",
+      "category": "sign",
+      "label": {
+        "it": "Piccoli nodi e linee in basso a destra",
+        "en": "Piccoli nodi e linee in basso a destra"
+      },
+      "asset": {
+        "file": "elements/delicate_tension__08_08_nodi_basso_dest.png",
+        "width": 640,
+        "height": 603,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Delicate Tension. No. 85",
+        "year": 1923,
+        "holder": "Museo Nacional Thyssen-Bornemisza",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Thyssen-Bornemisza [7]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Piccoli nodi e linee in basso a destra",
+          "en": "Piccoli nodi e linee in basso a destra"
+        },
+        "extended": {
+          "it": "Il punto è una forma concentrata e senza direzione; quando viene attraversato o accompagnato da linee, a quella tensione si aggiungono direzioni precise. Il significato è formale, non figurativo."
+        },
+        "cardId": "card_delicate_tension__08_08_nodi_basso_dest"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "8n",
+        "every": 1,
+        "gain": -6,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 952,
+      "tags": [
+        "delicate_tension",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "delicate_tension__09_09_orbita_bianca",
+      "category": "arc",
+      "label": {
+        "it": "Curva chiusa / semicircolare con linee",
+        "en": "Curva chiusa / semicircolare con linee"
+      },
+      "asset": {
+        "file": "elements/delicate_tension__09_09_orbita_bianca.png",
+        "width": 620,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Delicate Tension. No. 85",
+        "year": 1923,
+        "holder": "Museo Nacional Thyssen-Bornemisza",
+        "rights": "to-verify",
+        "rightsNote": "Opera documentata dal Thyssen-Bornemisza [7]. Verificare i diritti sulla riproduzione fotografica."
+      },
+      "didactics": {
+        "short": {
+          "it": "Curva chiusa / semicircolare con linee",
+          "en": "Curva chiusa / semicircolare con linee"
+        },
+        "extended": {
+          "it": "La curva contiene, per Kandinsky, il germe del piano e può arrivare a chiudersi nel cerchio. Il termine “orbita” è solo un'etichetta tecnica del file e non una denominazione documentata."
+        },
+        "cardId": "card_delicate_tension__09_09_orbita_bianca"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sweep",
+        "length": "8n",
+        "every": 4,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 951,
+      "tags": [
+        "delicate_tension",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__01_01_blob_giallo_arancio",
+      "category": "organic",
+      "label": {
+        "it": "Forma organica giallo-arancione",
+        "en": "Forma organica giallo-arancione"
+      },
+      "asset": {
+        "file": "elements/small_worlds__01_01_blob_giallo_arancio.png",
+        "width": 640,
+        "height": 589,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Forma organica giallo-arancione",
+          "en": "Forma organica giallo-arancione"
+        },
+        "extended": {
+          "it": "Il giallo è per Kandinsky un colore espansivo e aggressivo; l'arancione conserva l'energia del rosso ma viene spinto verso l'esterno dal giallo. Non è documentato un significato oggettuale specifico."
+        },
+        "cardId": "card_small_worlds__01_01_blob_giallo_arancio"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "texture",
+        "length": "2m",
+        "every": 4,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 970,
+      "tags": [
+        "small_worlds",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__02_02_catena_cerchi",
+      "category": "circle",
+      "label": {
+        "it": "Sequenza di piccoli cerchi",
+        "en": "Sequenza di piccoli cerchi"
+      },
+      "asset": {
+        "file": "elements/small_worlds__02_02_catena_cerchi.png",
+        "width": 640,
+        "height": 473,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Sequenza di piccoli cerchi",
+          "en": "Sequenza di piccoli cerchi"
+        },
+        "extended": {
+          "it": "Le forme puntiformi e circolari sono unità concentrate e autocontenute. La ripetizione costruisce una relazione tra più tensioni, senza implicare un significato figurativo univoco."
+        },
+        "cardId": "card_small_worlds__02_02_catena_cerchi"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sequence",
+        "length": "16n",
+        "every": 2,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 969,
+      "tags": [
+        "small_worlds",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__03_03_rombo_verde",
+      "category": "triangle",
+      "label": {
+        "it": "Rombo verde",
+        "en": "Rombo verde"
+      },
+      "asset": {
+        "file": "elements/small_worlds__03_03_rombo_verde.png",
+        "width": 615,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Rombo verde",
+          "en": "Rombo verde"
+        },
+        "extended": {
+          "it": "Il verde è descritto da Kandinsky come un colore di equilibrio e quiete. La forma angolare, invece, introduce direzione e tensione, creando un contrasto tra colore e geometria."
+        },
+        "cardId": "card_small_worlds__03_03_rombo_verde"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "accent",
+        "length": "16n",
+        "every": 1,
+        "gain": -3,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 968,
+      "tags": [
+        "small_worlds",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__04_04_razzo_circolare",
+      "category": "fragment",
+      "label": {
+        "it": "Combinazione di cerchio e triangolo",
+        "en": "Combinazione di cerchio e triangolo"
+      },
+      "asset": {
+        "file": "elements/small_worlds__04_04_razzo_circolare.png",
+        "width": 530,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Combinazione di cerchio e triangolo",
+          "en": "Combinazione di cerchio e triangolo"
+        },
+        "extended": {
+          "it": "Cerchio e triangolo sono indicati da Kandinsky come forme piane fortemente contrastanti. Il nome “razzo” non ha base documentaria ed è solo un'etichetta tecnica del file."
+        },
+        "cardId": "card_small_worlds__04_04_razzo_circolare"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sweep",
+        "length": "8n",
+        "every": 4,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 967,
+      "tags": [
+        "small_worlds",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__05_05_blob_dest",
+      "category": "organic",
+      "label": {
+        "it": "Tratto nero curvilineo",
+        "en": "Tratto nero curvilineo"
+      },
+      "asset": {
+        "file": "elements/small_worlds__05_05_blob_dest.png",
+        "width": 640,
+        "height": 494,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Tratto nero curvilineo",
+          "en": "Tratto nero curvilineo"
+        },
+        "extended": {
+          "it": "La curva porta una tensione elastica e continua; il nero, per Kandinsky, corrisponde a un silenzio profondo e immobile. Nessun oggetto specifico è documentato."
+        },
+        "cardId": "card_small_worlds__05_05_blob_dest"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "texture",
+        "length": "2m",
+        "every": 4,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 966,
+      "tags": [
+        "small_worlds",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__06_06_triangolo_nero",
+      "category": "triangle",
+      "label": {
+        "it": "Grande triangolo nero",
+        "en": "Grande triangolo nero"
+      },
+      "asset": {
+        "file": "elements/small_worlds__06_06_triangolo_nero.png",
+        "width": 640,
+        "height": 549,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Grande triangolo nero",
+          "en": "Grande triangolo nero"
+        },
+        "extended": {
+          "it": "Il triangolo è una delle forme piane primarie e si contrappone fortemente al cerchio. Il nero accentua il carattere di contrasto e immobilità."
+        },
+        "cardId": "card_small_worlds__06_06_triangolo_nero"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "accent",
+        "length": "16n",
+        "every": 1,
+        "gain": -3,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 965,
+      "tags": [
+        "small_worlds",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__07_07_onde_centrali",
+      "category": "organic",
+      "label": {
+        "it": "Linee ondulate parallele",
+        "en": "Linee ondulate parallele"
+      },
+      "asset": {
+        "file": "elements/small_worlds__07_07_onde_centrali.png",
+        "width": 640,
+        "height": 556,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Linee ondulate parallele",
+          "en": "Linee ondulate parallele"
+        },
+        "extended": {
+          "it": "Le linee curve derivano da pressioni continue che deviano la retta. La ripetizione di più curve genera una sequenza visiva di tensioni e direzioni."
+        },
+        "cardId": "card_small_worlds__07_07_onde_centrali"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sweep",
+        "length": "8n",
+        "every": 4,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 964,
+      "tags": [
+        "small_worlds",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__08_08_simbolo_rosso",
+      "category": "sign",
+      "label": {
+        "it": "Forma rossa isolata",
+        "en": "Forma rossa isolata"
+      },
+      "asset": {
+        "file": "elements/small_worlds__08_08_simbolo_rosso.png",
+        "width": 523,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Forma rossa isolata",
+          "en": "Forma rossa isolata"
+        },
+        "extended": {
+          "it": "Il rosso è descritto da Kandinsky come un colore di forte energia interna. Non è possibile certificare che la forma sia una lettera o un simbolo: nessuna fonte consultata lo documenta."
+        },
+        "cardId": "card_small_worlds__08_08_simbolo_rosso"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "accent",
+        "length": "16n",
+        "every": 1,
+        "gain": -3,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 963,
+      "tags": [
+        "small_worlds",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__09_09_triangolo_piccolo",
+      "category": "triangle",
+      "label": {
+        "it": "Piccolo triangolo nero",
+        "en": "Piccolo triangolo nero"
+      },
+      "asset": {
+        "file": "elements/small_worlds__09_09_triangolo_piccolo.png",
+        "width": 478,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Piccolo triangolo nero",
+          "en": "Piccolo triangolo nero"
+        },
+        "extended": {
+          "it": "La forma triangolare concentra una forte direzionalità e appartiene alle forme piane fondamentali analizzate da Kandinsky. Il nero introduce un contrasto netto con lo sfondo."
+        },
+        "cardId": "card_small_worlds__09_09_triangolo_piccolo"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "accent",
+        "length": "16n",
+        "every": 1,
+        "gain": -3,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 962,
+      "tags": [
+        "small_worlds",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__10_10_quadrato_viola",
+      "category": "square",
+      "label": {
+        "it": "Quadrato viola",
+        "en": "Quadrato viola"
+      },
+      "asset": {
+        "file": "elements/small_worlds__10_10_quadrato_viola.png",
+        "width": 640,
+        "height": 551,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Quadrato viola",
+          "en": "Quadrato viola"
+        },
+        "extended": {
+          "it": "Kandinsky descrive il viola come un rosso raffreddato dal blu, quindi più passivo e ritirato. Il quadrato è una delle forme piane primarie insegnate nel contesto Bauhaus."
+        },
+        "cardId": "card_small_worlds__10_10_quadrato_viola"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "drone",
+        "length": "2m",
+        "every": 4,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 961,
+      "tags": [
+        "small_worlds",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "small_worlds__11_11_blob_basso_dest",
+      "category": "organic",
+      "label": {
+        "it": "Forma cromatica irregolare",
+        "en": "Forma cromatica irregolare"
+      },
+      "asset": {
+        "file": "elements/small_worlds__11_11_blob_basso_dest.png",
+        "width": 621,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Immagine fornita — attribuzione a Kleine Welten non certificata",
+        "rights": "to-verify",
+        "rightsNote": "La fonte MoMA [6] è contesto sul portfolio, non prova dell'identità di questa immagine. Attribuzione da verificare."
+      },
+      "didactics": {
+        "short": {
+          "it": "Forma cromatica irregolare",
+          "en": "Forma cromatica irregolare"
+        },
+        "extended": {
+          "it": "Per questo frammento non è documentato un significato simbolico specifico. In termini kandinskiani, il suo ruolo può essere descritto soltanto attraverso forma, colore e relazione con gli elementi vicini."
+        },
+        "cardId": "card_small_worlds__11_11_blob_basso_dest"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "texture",
+        "length": "2m",
+        "every": 4,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 960,
+      "tags": [
+        "small_worlds",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "opera_verticale__01_01_strisce_ondulate",
+      "category": "line",
+      "label": {
+        "it": "Strisce ondulate parallele",
+        "en": "Strisce ondulate parallele"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__01_01_strisce_ondulate.png",
+        "width": 300,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Strisce ondulate parallele",
+          "en": "Strisce ondulate parallele"
+        },
+        "extended": {
+          "it": "Le linee curve sono generate, per Kandinsky, da forze continue che deviano la retta. La loro ripetizione costruisce una sequenza di tensioni; non è documentato un significato figurativo specifico."
+        },
+        "cardId": "card_opera_verticale__01_01_strisce_ondulate"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "8n",
+        "every": 1,
+        "gain": -6,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 990,
+      "tags": [
+        "opera_verticale",
+        "t"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "opera_verticale__02_02_triangolo_grande",
+      "category": "triangle",
+      "label": {
+        "it": "Grande triangolo",
+        "en": "Grande triangolo"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__02_02_triangolo_grande.png",
+        "width": 435,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Grande triangolo",
+          "en": "Grande triangolo"
+        },
+        "extended": {
+          "it": "Il triangolo è una forma piana primaria e, negli scritti di Kandinsky, costituisce il massimo contrasto formale con il cerchio. La sua struttura angolare produce una forte direzionalità."
+        },
+        "cardId": "card_opera_verticale__02_02_triangolo_grande"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "accent",
+        "length": "16n",
+        "every": 1,
+        "gain": -3,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 989,
+      "tags": [
+        "opera_verticale",
+        "t"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "opera_verticale__03_03_cerchio_blu",
+      "category": "circle",
+      "label": {
+        "it": "Cerchio blu",
+        "en": "Cerchio blu"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__03_03_cerchio_blu.png",
+        "width": 640,
+        "height": 616,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore."
+      },
+      "didactics": {
+        "short": {
+          "it": "Cerchio blu",
+          "en": "Cerchio blu"
+        },
+        "extended": {
+          "it": "È una combinazione particolarmente coerente con il sistema di Kandinsky: il blu tende alla profondità e al raccoglimento, mentre il cerchio è una forma chiusa e concentrica."
+        },
+        "cardId": "card_opera_verticale__03_03_cerchio_blu"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 988,
+      "tags": [
+        "opera_verticale",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "opera_verticale__04_04_cerchio_arancio",
+      "category": "circle",
+      "label": {
+        "it": "Cerchio arancione",
+        "en": "Cerchio arancione"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__04_04_cerchio_arancio.png",
+        "width": 599,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore."
+      },
+      "didactics": {
+        "short": {
+          "it": "Cerchio arancione",
+          "en": "Cerchio arancione"
+        },
+        "extended": {
+          "it": "L'arancione deriva, nella teoria di Kandinsky, dal rosso attivato dal giallo; tende quindi verso una maggiore espansione. Il cerchio gli contrappone una forma raccolta e chiusa."
+        },
+        "cardId": "card_opera_verticale__04_04_cerchio_arancio"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 987,
+      "tags": [
+        "opera_verticale",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "opera_verticale__05_05_cerchio_verde",
+      "category": "circle",
+      "label": {
+        "it": "Cerchio verde",
+        "en": "Cerchio verde"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__05_05_cerchio_verde.png",
+        "width": 640,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore."
+      },
+      "didactics": {
+        "short": {
+          "it": "Cerchio verde",
+          "en": "Cerchio verde"
+        },
+        "extended": {
+          "it": "Kandinsky descrive il verde, equilibrio di giallo e blu, come un colore statico e riposante. La forma circolare rafforza la sensazione di concentrazione e stabilità."
+        },
+        "cardId": "card_opera_verticale__05_05_cerchio_verde"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pad",
+        "length": "1n",
+        "every": 2,
+        "gain": -4,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 986,
+      "tags": [
+        "opera_verticale",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "opera_verticale__06_06_rettangolo_strisce",
+      "category": "square",
+      "label": {
+        "it": "Rettangolo a fasce orizzontali",
+        "en": "Rettangolo a fasce orizzontali"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__06_06_rettangolo_strisce.png",
+        "width": 640,
+        "height": 436,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore."
+      },
+      "didactics": {
+        "short": {
+          "it": "Rettangolo a fasce orizzontali",
+          "en": "Rettangolo a fasce orizzontali"
+        },
+        "extended": {
+          "it": "Nel sistema di Kandinsky la linea orizzontale ha un carattere relativamente freddo e passivo. La successione di fasce mette in evidenza la relazione tra direzione lineare e divisione del piano."
+        },
+        "cardId": "card_opera_verticale__06_06_rettangolo_strisce"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "8n",
+        "every": 1,
+        "gain": -6,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 985,
+      "tags": [
+        "opera_verticale",
+        "t"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "opera_verticale__07_07_archi_blu",
+      "category": "arc",
+      "label": {
+        "it": "Archi blu",
+        "en": "Archi blu"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__07_07_archi_blu.png",
+        "width": 640,
+        "height": 601,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore."
+      },
+      "didactics": {
+        "short": {
+          "it": "Archi blu",
+          "en": "Archi blu"
+        },
+        "extended": {
+          "it": "Le curve introducono elasticità e una tendenza alla chiusura; il blu aggiunge profondità e movimento verso l'interno. Non è documentato un significato figurativo specifico."
+        },
+        "cardId": "card_opera_verticale__07_07_archi_blu"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sweep",
+        "length": "8n",
+        "every": 4,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 984,
+      "tags": [
+        "opera_verticale",
+        "t/nd"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "opera_verticale__08_08_colonna_cerchi",
+      "category": "circle",
+      "label": {
+        "it": "Sequenza verticale di cerchi",
+        "en": "Sequenza verticale di cerchi"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__08_08_colonna_cerchi.png",
+        "width": 277,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Sequenza verticale di cerchi",
+          "en": "Sequenza verticale di cerchi"
+        },
+        "extended": {
+          "it": "Il punto e le forme circolari sono descritti da Kandinsky come unità concentrate e autocontenute. La successione di più unità crea un rapporto ritmico e spaziale, non un simbolo univoco."
+        },
+        "cardId": "card_opera_verticale__08_08_colonna_cerchi"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sequence",
+        "length": "16n",
+        "every": 2,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 983,
+      "tags": [
+        "opera_verticale",
+        "t"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "opera_verticale__09_09_griglia_colori",
+      "category": "grid",
+      "label": {
+        "it": "Griglia di piani colorati",
+        "en": "Griglia di piani colorati"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__09_09_griglia_colori.png",
+        "width": 519,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Griglia di piani colorati",
+          "en": "Griglia di piani colorati"
+        },
+        "extended": {
+          "it": "La suddivisione del piano in unità geometriche permette di confrontare pesi, tensioni e rapporti cromatici. Il significato nasce dall'interazione tra le parti, non da un oggetto rappresentato."
+        },
+        "cardId": "card_opera_verticale__09_09_griglia_colori"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "pulse",
+        "length": "16n",
+        "every": 1,
+        "gain": -8,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 982,
+      "tags": [
+        "opera_verticale",
+        "t"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "opera_verticale__10_10_curva_rosa",
+      "category": "arc",
+      "label": {
+        "it": "Grande forma curva rosa",
+        "en": "Grande forma curva rosa"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__10_10_curva_rosa.png",
+        "width": 629,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Grande forma curva rosa",
+          "en": "Grande forma curva rosa"
+        },
+        "extended": {
+          "it": "La curva porta, secondo Kandinsky, una tensione elastica e la possibilità di trasformarsi in piano. Non è attribuito qui un significato specifico al rosa, perché non è documentato per questo frammento."
+        },
+        "cardId": "card_opera_verticale__10_10_curva_rosa"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "sweep",
+        "length": "8n",
+        "every": 4,
+        "gain": -5,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 981,
+      "tags": [
+        "opera_verticale",
+        "t/nd"
+      ],
+      "enabled": false
+    },
+    {
+      "id": "opera_verticale__11_11_cluster_centrale",
+      "category": "fragment",
+      "label": {
+        "it": "Aggregato geometrico centrale",
+        "en": "Aggregato geometrico centrale"
+      },
+      "asset": {
+        "file": "elements/opera_verticale__11_11_cluster_centrale.png",
+        "width": 623,
+        "height": 640,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "tintable": false
+      },
+      "provenance": {
+        "artwork": "Opera verticale — titolo non certificato",
+        "rights": "to-verify",
+        "rightsNote": "Il nome era una denominazione tecnica di lavoro, non un titolo storico. Identificazione dell'opera da completare con il curatore. — RITAGLIO DA RIFARE: il file contiene ancora il fondo dipinto attorno alla forma."
+      },
+      "didactics": {
+        "short": {
+          "it": "Aggregato geometrico centrale",
+          "en": "Aggregato geometrico centrale"
+        },
+        "extended": {
+          "it": "Il frammento combina piani, linee e colori: i tre ambiti che Kandinsky analizza come componenti della costruzione pittorica. Non è documentata un'identificazione figurativa specifica."
+        },
+        "cardId": "card_opera_verticale__11_11_cluster_centrale"
+      },
+      "behaviour": {
+        "defaultScale": 0.406,
+        "minScale": 0.15,
+        "maxScale": 2.5,
+        "rotatable": true,
+        "aspectLocked": true,
+        "duplicable": true
+      },
+      "sound": {
+        "role": "chord",
+        "length": "1n",
+        "every": 4,
+        "gain": -6,
+        "loops": true
+      },
+      "ageRange": [
+        5,
+        12
+      ],
+      "priority": 980,
+      "tags": [
+        "opera_verticale",
+        "t/nd"
+      ],
+      "enabled": false
+    }
+  ],
+  "sets": [
+    {
+      "id": "intersecting_lines",
+      "label": {
+        "it": "Linee che si incrociano",
+        "en": "Intersecting Lines"
+      },
+      "source": "Sich kreuzende Linien, 1923",
+      "order": 1
+    },
+    {
+      "id": "gelb_rot_blau",
+      "label": {
+        "it": "Giallo Rosso Blu",
+        "en": "Yellow Red Blue"
+      },
+      "source": "Gelb-Rot-Blau, 1925 — Centre Pompidou",
+      "order": 2
+    },
+    {
+      "id": "delicate_tension",
+      "label": {
+        "it": "Tensione delicata",
+        "en": "Delicate Tension"
+      },
+      "source": "Delicate Tension No. 85, 1923 — Thyssen-Bornemisza",
+      "order": 3
+    },
+    {
+      "id": "small_worlds",
+      "label": {
+        "it": "Piccoli mondi",
+        "en": "Small Worlds"
+      },
+      "source": "Attribuzione da verificare",
+      "order": 4
+    },
+    {
+      "id": "opera_verticale",
+      "label": {
+        "it": "Composizione verticale",
+        "en": "Vertical composition"
+      },
+      "source": "Titolo non certificato",
+      "order": 5
+    }
+  ]
+}
