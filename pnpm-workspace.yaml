@@ -1,3 +1,18 @@
 packages:
   - "apps/*"
   - "packages/*"
+
+# Script di installazione autorizzati.
+#
+# Dalla versione 10 pnpm blocca per default gli script postinstall delle
+# dipendenze: è una difesa contro i pacchetti che eseguono codice arbitrario
+# durante l'installazione. Questi due ne hanno bisogno per funzionare:
+#
+#   electron  scarica il binario del browser (~250 MB)
+#   esbuild   scarica il proprio eseguibile nativo
+#
+# È anche il posto in cui la configurazione si è spostata: il campo "pnpm"
+# in package.json non viene più letto.
+onlyBuiltDependencies:
+  - electron
+  - esbuild

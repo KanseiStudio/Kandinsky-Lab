@@ -25,7 +25,7 @@
     "consentVersion": "1.0"
   },
   "server": {
-    "baseUrl": "http://localhost:8787",
+    "baseUrl": "",
     "timeoutMs": 8000
   },
   "debug": false,

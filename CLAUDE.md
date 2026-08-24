@@ -130,6 +130,14 @@ Da fare, in ordine:
 10. **Tavolozza scura**: `darkCanvas` esiste nello schema e la palette Composition X lo
     usa, ma l'interfaccia non inverte ancora i contrasti.
 
+## Una sola configurazione per tre ambienti
+
+`server.baseUrl` è **vuoto ovunque**: il frontend chiama sempre la propria
+origine. In sviluppo funziona grazie al proxy `/api` in `vite.config.ts`, sul
+web perché Express serve anche i file statici, in sala perché il guscio espone
+gli stessi endpoint. Non esistono rami "se sono nell'applicazione desktop", e
+non devono essere introdotti.
+
 ## Pubblicazione
 
 `docs/deploy.md`. In produzione il server Express serve anche `apps/kiosk/dist`
@@ -142,6 +150,25 @@ che deve restare aperto o i servizi di hosting riavviano l'applicazione in ciclo
 **Niente API del browser che richiedano contesto sicuro senza fallback.**
 `crypto.randomUUID` non esiste su `http://` fuori da localhost: è il motivo per
 cui esiste `app/uuid.ts`. Vale per qualunque cosa si aggiunga in futuro.
+
+## Trappole di installazione
+
+**pnpm 10+ blocca gli script postinstall.** Electron ed esbuild scaricano i
+propri binari da lì, quindi vanno elencati sotto `onlyBuiltDependencies` in
+`pnpm-workspace.yaml`. Il sintomo è `Electron failed to install correctly`.
+Il campo `pnpm` in `package.json` non viene più letto: la configurazione sta
+tutta nel file del workspace.
+
+**La cache degli effetti collaterali di pnpm congela gli script falliti.**
+pnpm memorizza il risultato dei postinstall e lo riusa: se una volta lo script
+è fallito o è stato saltato, ogni installazione successiva ripristina quello
+stato incompleto in poche centinaia di millisecondi, e cancellare `node_modules`
+non cambia nulla. Il sintomo è un postinstall che "riesce" in 300 ms quando
+dovrebbe scaricare 250 MB. Per questo `.npmrc` ha `side-effects-cache=false`.
+
+**`--filter` all'installazione salta interi progetti.** Installare solo server
+e kiosk lascia il guscio senza dipendenze; è voluto sul server web, ma se poi
+si vuole l'applicazione di sala serve un `pnpm install` completo.
 
 ## Trappole di tipo
 

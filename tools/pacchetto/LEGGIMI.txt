@@ -1,0 +1,65 @@
+KANDINSKY LAB
+Installazione per postazione touch
+
+
+PRIMA ACCENSIONE
+
+1. Copiare l'intera cartella sul computer della postazione.
+   Va bene qualsiasi percorso purche' scrivibile: il Desktop o C:\Kandinsky
+   vanno bene, "C:\Programmi" no.
+
+2. Fare doppio clic su "Avvia Kandinsky Lab.bat".
+   Alla prima accensione viene creata la cartella "dati" con dentro il file
+   di configurazione.
+
+3. Chiudere con Ctrl+Alt+Maiusc+Q.
+
+4. Aprire "dati\kandinsky.config.json" con un editor di testo e compilare
+   i dati della casella di posta e il nome dell'istituzione.
+   ATTENZIONE: salvare in UTF-8. Il Blocco note di Windows va bene.
+
+5. Riavviare con il file .bat. Sulla finestra nera deve comparire
+   "invio e-mail attivo". Se dice DISATTIVO, indica anche quale campo manca.
+
+
+USO QUOTIDIANO
+
+Accendere il computer: l'applicazione parte da sola, se e' stato configurato
+l'avvio automatico. Altrimenti doppio clic sul file .bat.
+
+Se l'applicazione si chiude per un problema, il file .bat la riapre da solo
+dopo cinque secondi. Non c'e' nulla da fare.
+
+
+COMBINAZIONI DI TASTI
+
+  Ctrl+Alt+Maiusc+Q     chiude davvero l'applicazione e ferma il rilancio
+  Ctrl+Alt+Maiusc+D     apre la cartella dei dati
+
+
+LA CARTELLA "dati"
+
+  kandinsky.config.json   configurazione: posta, nome del museo, schermo intero
+  outbox.json             coda degli invii, con stato ed eventuali errori
+  opere\                  le immagini create dai bambini
+
+Tutto qui dentro viaggia con la cartella: copiandola su un altro computer si
+porta dietro anche configurazione e opere.
+
+
+SE LE E-MAIL NON PARTONO
+
+Aprire "dati\outbox.json" con un editor di testo. Ogni opera ha un campo
+"ultimoErrore" che dice cosa e' successo:
+
+  ETIMEDOUT / ECONNREFUSED   la rete blocca la porta della posta
+  EAUTH                      utente o password non accettati
+  EENVELOPE                  l'indirizzo del mittente non e' accettato dal
+                             provider: deve coincidere con quello dell'utente
+
+Le opere restano salvate in ogni caso e vengono ritentate da sole.
+
+
+CONTATTI
+
+Kansei Studio - info@kansei-studio.com

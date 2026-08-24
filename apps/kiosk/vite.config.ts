@@ -62,6 +62,12 @@ export default defineConfig({
   server: {
     port: 5180,
     host: true,
+    // Con il proxy, `server.baseUrl` resta vuoto ovunque: in sviluppo, sul
+    // web e nell'applicazione di sala il frontend chiama sempre la propria
+    // origine. Una configurazione sola, nessun ramo per ambiente.
+    proxy: {
+      "/api": { target: "http://localhost:8787", changeOrigin: true },
+    },
   },
   resolve: {
     alias: {

@@ -5,9 +5,13 @@
   "main": "main.cjs",
   "scripts": {
     "start": "electron .",
-    "pack:mac": "electron-builder --mac --arm64 --x64",
     "pack:win": "electron-builder --win --x64",
-    "pack:dir": "electron-builder --dir"
+    "pack:mac": "electron-builder --mac --arm64 --x64",
+    "pack:dir": "electron-builder --dir",
+    "pack:win:locale": "electron-builder --win --x64 --config.electronDist=%ELECTRON_OVERRIDE_DIST_PATH%"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
   },
   "devDependencies": {
     "electron": "^33.0.2",
@@ -21,8 +25,8 @@
       "output": "release"
     },
     "files": [
-      "main.cjs",
-      "server.cjs"
+      "*.cjs",
+      "package.json"
     ],
     "extraResources": [
       {
@@ -34,6 +38,30 @@
         "to": "content"
       }
     ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Kandinsky-Lab-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Kandinsky Lab"
+    },
     "mac": {
       "category": "public.app-category.education",
       "target": [
@@ -44,18 +72,7 @@
             "x64"
           ]
         }
-      ],
-      "darkModeSupport": false,
-      "extendInfo": {
-        "NSHighResolutionCapable": true,
-        "LSUIElement": false
-      }
-    },
-    "dmg": {
-      "title": "Kandinsky Lab"
-    },
-    "win": {
-      "target": "nsis"
+      ]
     },
     "linux": {
       "target": "AppImage",

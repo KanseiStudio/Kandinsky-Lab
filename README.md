@@ -59,6 +59,20 @@ pnpm app:win     # installatore Windows
 Uscita dal chiosco: **Ctrl/Cmd + Alt + Shift + Q**. Dettagli in
 `docs/app-desktop.md`.
 
+## Applicazione di sala
+
+Autosufficiente: serve l'esperienza, salva le opere e le spedisce, senza
+servizi esterni.
+
+```bash
+pnpm app:dev     # prova senza impacchettare
+pnpm app:win     # installatore Windows + versione portabile
+pnpm app:mac     # .dmg (richiede un Mac)
+```
+
+Uscita **Ctrl+Alt+Shift+Q**, cartella dati **Ctrl+Alt+Shift+D**.
+Dettagli in `docs/app-sala.md`.
+
 ## Pubblicare l'anteprima
 
 Un solo processo Node serve esperienza, contenuti e API, protetti da una

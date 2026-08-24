@@ -3,15 +3,16 @@ const { createServer } = require("node:http");
 const { extname, join, normalize, resolve } = require("node:path");
 
 /**
- * Server statico interno all'applicazione.
+ * Server interno all'applicazione.
  *
- * Perché non caricare i file con `file://`: i moduli ES e le richieste fetch
- * verso /content sono soggetti alle regole di origine, e con il protocollo
- * file:// falliscono entrambe. Servire da 127.0.0.1 risolve tutto e non
- * apre nulla verso l'esterno.
+ * Fa due cose: serve l'esperienza e riceve le opere. Espone la stessa
+ * interfaccia HTTP del server web, così il codice del frontend è identico
+ * nelle due situazioni — nessun ramo "se sono nell'app desktop".
  *
- * Ascolta solo sull'interfaccia di loopback su una porta assegnata dal
- * sistema: nessun altro dispositivo della rete del museo può raggiungerlo.
+ * Perché non caricare i file con `file://`: i moduli ES e le richieste verso
+ * /content sono soggetti alle regole di origine, e con quel protocollo
+ * falliscono entrambi. Il server ascolta solo su 127.0.0.1 con una porta
+ * assegnata dal sistema: nessun dispositivo della rete del museo lo raggiunge.
  */
 const MIME = {
   ".html": "text/html; charset=utf-8",
@@ -25,40 +26,85 @@ const MIME = {
   ".woff2": "font/woff2",
   ".woff": "font/woff",
   ".map": "application/json",
-  ".mp3": "audio/mpeg",
-  ".wav": "audio/wav",
 };
 
-function servi(radice, richiesta, risposta, prefisso = "") {
-  const percorso = decodeURIComponent((richiesta.url ?? "/").split("?")[0]);
+const LIMITE_CORPO = 64 * 1024 * 1024; // i PNG ad alta risoluzione in base64
+
+function serviFile(radice, url, res, prefisso = "") {
+  const percorso = decodeURIComponent(url.split("?")[0]);
   const relativo = prefisso ? percorso.slice(prefisso.length) : percorso;
   const file = resolve(radice, `.${normalize(relativo)}`);
 
-  // Blocca l'uscita dalla cartella servita.
   if (!file.startsWith(radice)) {
-    risposta.writeHead(403).end();
+    res.writeHead(403).end();
     return true;
   }
   if (!existsSync(file) || !statSync(file).isFile()) return false;
 
-  risposta.writeHead(200, {
+  res.writeHead(200, {
     "Content-Type": MIME[extname(file).toLowerCase()] ?? "application/octet-stream",
     "Cache-Control": "no-store",
   });
-  createReadStream(file).pipe(risposta);
+  createReadStream(file).pipe(res);
   return true;
 }
 
-/** Avvia il server e restituisce l'indirizzo da caricare nella finestra. */
-function avviaServer({ kioskDir, contentDir }) {
+function leggiCorpo(req) {
   return new Promise((risolvi, rifiuta) => {
-    const server = createServer((req, res) => {
-      if (req.url?.startsWith("/content/")) {
-        if (servi(contentDir, req, res, "/content")) return;
+    const pezzi = [];
+    let dimensione = 0;
+    req.on("data", (c) => {
+      dimensione += c.length;
+      if (dimensione > LIMITE_CORPO) {
+        rifiuta(new Error("corpo troppo grande"));
+        req.destroy();
+        return;
       }
-      if (servi(kioskDir, req, res)) return;
+      pezzi.push(c);
+    });
+    req.on("end", () => {
+      try {
+        risolvi(JSON.parse(Buffer.concat(pezzi).toString("utf8")));
+      } catch (err) {
+        rifiuta(err);
+      }
+    });
+    req.on("error", rifiuta);
+  });
+}
 
-      // Qualunque altro percorso ricade sull'applicazione.
+function json(res, codice, dati) {
+  res.writeHead(codice, { "Content-Type": MIME[".json"] });
+  res.end(JSON.stringify(dati));
+}
+
+function avviaServer({ kioskDir, contentDir, consegna, log = console }) {
+  return new Promise((risolvi, rifiuta) => {
+    const server = createServer(async (req, res) => {
+      const url = req.url ?? "/";
+
+      // --- API -------------------------------------------------------------
+      if (url === "/api/artworks" && req.method === "POST") {
+        try {
+          const opera = await leggiCorpo(req);
+          if (!opera?.sessionId || !opera?.imageBase64) {
+            return json(res, 400, { error: "payload incompleto" });
+          }
+          const esito = consegna.accoda(opera);
+          return json(res, 202, { ok: true, sessionId: opera.sessionId, ...esito });
+        } catch (err) {
+          log.error(`[api] salvataggio fallito: ${err.message}`);
+          return json(res, 500, { error: String(err.message).slice(0, 200) });
+        }
+      }
+
+      if (url === "/api/health") return json(res, 200, { ok: true, ...consegna.stato() });
+      if (url === "/api/queue") return json(res, 200, consegna.stato());
+
+      // --- File statici ----------------------------------------------------
+      if (url.startsWith("/content/") && serviFile(contentDir, url, res, "/content")) return;
+      if (serviFile(kioskDir, url, res)) return;
+
       const indice = join(kioskDir, "index.html");
       if (existsSync(indice)) {
         res.writeHead(200, { "Content-Type": MIME[".html"] });
@@ -70,10 +116,10 @@ function avviaServer({ kioskDir, contentDir }) {
 
     server.on("error", rifiuta);
     // Porta 0: la sceglie il sistema fra quelle libere, così due postazioni
-    // sulla stessa macchina non si contendono la stessa.
+    // sulla stessa macchina non se la contendono.
     server.listen(0, "127.0.0.1", () => {
       const { port } = server.address();
-      risolvi({ url: `http://127.0.0.1:${port}`, server });
+      risolvi({ url: `http://127.0.0.1:${port}`, server, port });
     });
   });
 }
